@@ -1,8 +1,24 @@
 <script>
 	export let skillObj;
+	export let skillFunction;
+	import { skillDrawer } from '../routes/+page.svelte';
+
+	function handleSkillClick(object) {
+		var skillCard = document.getElementById('skill-card-main');
+		var responsive_class_name = 'responsive';
+		skillCard.classList.toggle(responsive_class_name);
+		console.log(skillCard.classList);
+		console.log(skillDrawer);
+	}
 </script>
 
-<main class="main-skill-div" id={'skill-' + skillObj.skillId.toString()}>
+<main
+	class="main-skill-div"
+	id={'skill-' + skillObj.skillId.toString()}
+	on:click={function () {
+		handleSkillClick(skillObj);
+	}}
+>
 	<img src={skillObj.skillImg} alt={skillObj.skillAlt} class="skill-img" />
 	{skillObj.skillName}
 </main>
@@ -29,34 +45,34 @@
 		position: absolute;
 		left: 0;
 		right: 0;
-		top: 8rem;
+		top: 80px;
 		margin: 0 auto;
 	}
 	#skill-2 {
 		position: absolute;
-		left: 45rem;
-		right: 5rem;
-		top: 18rem;
+		left: 600px;
+		right: 0;
+		top: 280px;
 		margin: 0 auto;
 	}
 	#skill-3 {
 		position: absolute;
-		left: 5rem;
-		right: 45rem;
-		top: 18rem;
+		left: 0px;
+		right: 600px;
+		top: 280px;
 		margin: 0 auto;
 	}
 	#skill-4 {
 		position: absolute;
 		left: 0;
-		right: 60rem;
+		right: 900px;
 		top: 0;
 		bottom: 0;
 		margin: auto auto;
 	}
 	#skill-5 {
 		position: absolute;
-		left: 60rem;
+		left: 900px;
 		right: 0;
 		top: 0;
 		bottom: 0;
@@ -64,23 +80,23 @@
 	}
 	#skill-6 {
 		position: absolute;
-		left: 5rem;
-		right: 45rem;
-		bottom: 18rem;
+		left: 0;
+		right: 600px;
+		bottom: 280px;
 		margin: 0 auto;
 	}
 	#skill-7 {
 		position: absolute;
-		left: 45rem;
-		right: 5rem;
-		bottom: 18rem;
+		left: 600px;
+		right: 0;
+		bottom: 280px;
 		margin: 0 auto;
 	}
 	#skill-8 {
 		position: absolute;
 		left: 0;
 		right: 0;
-		bottom: 8rem;
+		bottom: 80px;
 		margin: 0 auto;
 	}
 

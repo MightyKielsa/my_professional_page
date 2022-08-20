@@ -1,5 +1,4 @@
 <script>
-	export let skillObj;
 	const projectsArr = [
 		{ projectName: 'Bootcam Adiutor' },
 		{ projectName: 'Weather App' },

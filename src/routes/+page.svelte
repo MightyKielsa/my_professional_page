@@ -1,8 +1,11 @@
 <script>
+	import { get_all_dirty_from_scope } from 'svelte/internal';
+
 	import Navbar from '../lib/Navbar.svelte';
 	import ProjectCard from '../lib/ProjectCard.svelte';
 	import Skill from '../lib/Skill.svelte';
 	import SkillCard from '../lib/SkillCard.svelte';
+	import { writable } from 'svelte/store';
 
 	const skillsArr = [
 		{
@@ -63,12 +66,7 @@
 		}
 	];
 
-	function handleSkillClick(skillObj) {
-		var skillCard = document.getElementById('navigation-bar');
-		var responsive_class_name = 'responsive';
-		skillCard.classList.toggle(responsive_class_name);
-		console.log(skillCard.classList);
-	}
+	export const skillDrawer = writable(undefined);
 </script>
 
 <main>
@@ -188,6 +186,7 @@
 		width: 55%;
 		background-color: var(--secondary);
 		position: relative;
+		min-width: 1200px;
 	}
 	.main-vertical-img {
 		width: 45%;
