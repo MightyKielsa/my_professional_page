@@ -1,11 +1,15 @@
 <script>
-	import { get_all_dirty_from_scope } from 'svelte/internal';
-
 	import Navbar from '../lib/Navbar.svelte';
-	import ProjectCard from '../lib/ProjectCard.svelte';
 	import Skill from '../lib/Skill.svelte';
 	import SkillCard from '../lib/SkillCard.svelte';
 	import { writable } from 'svelte/store';
+	import ProjectCard from '../lib/ProjectCard.svelte';
+
+	const projectsArr = [
+		{ projectImg: '', projectName: 'Bootcamper Adiutor', projectDescription: '' },
+		{ projectImg: '', projectName: 'Bootcamper Adiutor', projectDescription: '' },
+		{ projectImg: '', projectName: 'Bootcamper Adiutor', projectDescription: '' }
+	];
 
 	const skillsArr = [
 		{
@@ -65,8 +69,9 @@
 			info: 'blah blah blah'
 		}
 	];
+	let hobbiesArr = ['Technology', 'Boxing', 'Reading', 'Gaming', 'Warhammer 40k', 'LotR'];
 
-	export const skillDrawer = writable(undefined);
+	export const skillDrawer = writable('hello');
 </script>
 
 <main>
@@ -112,6 +117,29 @@
 			/>
 			<SkillCard />
 		</section>
+		<section class="projects-section-main-div">
+			<h2>Projects:</h2>
+			<div class="project-cards-row">
+				{#each projectsArr as project}
+					<ProjectCard skillObj={project} />
+				{/each}
+			</div>
+		</section>
+		<section class="personal-corner-main-div">
+			<h2>Personal corner</h2>
+			<div class="personal-corner-content-div">
+				<ul aria-label="Hobbies">
+					{#each hobbiesArr as hobby}
+						<li>{hobby}</li>
+					{/each}
+				</ul>
+				<ul aria-label="Favourite Books">
+					<li>l1</li>
+					<li>l2</li>
+					<li>l3</li>
+				</ul>
+			</div>
+		</section>
 	</div>
 </main>
 
@@ -136,12 +164,13 @@
 	* {
 		margin: 0;
 		padding: 0;
-		background-color: var(--background);
+
 		font-family: var(--font-fam);
 	}
 
 	.main-body-element {
-		height: 292vh;
+		background-color: var(--background);
+		height: 392vh;
 		position: absolute;
 		top: 8vh;
 		left: 0;
@@ -151,6 +180,7 @@
 		align-items: center;
 	}
 
+	/*____________________________ABOUT ME SECTION___________________________*/
 	.main-body-element h1 {
 		font-size: 400%;
 		margin-top: 3vh;
@@ -166,16 +196,17 @@
 	.about-me {
 		display: flex;
 		width: 80%;
-		font-size: large;
+		font-size: 100%;
 		text-align: center;
 		height: 47vh;
 	}
 
 	.about-me p {
 		margin-top: 2rem;
-		font-size: xx-large;
+		font-size: 150%;
 	}
 
+	/*____________________________SKILLS SECTION___________________________*/
 	.skills-section-main-div {
 		display: flex;
 		width: 100%;
@@ -186,7 +217,6 @@
 		width: 55%;
 		background-color: var(--secondary);
 		position: relative;
-		min-width: 1200px;
 	}
 	.main-vertical-img {
 		width: 45%;
@@ -211,7 +241,63 @@
 		bottom: 0;
 		margin: auto auto;
 	}
-	#skills-header-div h2 {
-		background-color: var(--supporting-1);
+
+	/*____________________________PROJECTS SECTION___________________________*/
+
+	.projects-section-main-div {
+		height: 94vh;
+		width: 100%;
+		background-color: var(--background);
+		text-align: center;
+	}
+
+	.projects-section-main-div h2 {
+		font-size: 3rem;
+		margin-top: 3rem;
+	}
+
+	.project-cards-row {
+		margin-top: 3rem;
+		display: flex;
+		justify-content: space-evenly;
+	}
+
+	/*____________________________PERSONAL CORNER___________________________*/
+
+	.personal-corner-main-div {
+		height: 94vh;
+		background-color: var(--secondary);
+		width: 100%;
+	}
+	.personal-corner-main-div h2 {
+		font-size: 3rem;
+		margin-top: 3rem;
+		text-align: center;
+	}
+	.personal-corner-content-div {
+		width: 100%;
+		height: 90%;
+		display: flex;
+		justify-content: space-around;
+	}
+	.personal-corner-content-div ul:before {
+		content: attr(aria-label);
+		font-size: 140%;
+		font-weight: bold;
+		margin-left: -15px;
+	}
+
+	.personal-corner-content-div ul {
+		background-color: var(--background);
+		width: 300px;
+		height: 70%;
+		padding: 2rem;
+		border-radius: 2rem;
+		font-size: 130%;
+		list-style: none;
+		box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.5);
+	}
+	.personal-corner-content-div li {
+		margin-top: 20px;
 	}
 </style>

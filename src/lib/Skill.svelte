@@ -1,14 +1,13 @@
 <script>
+	//import skillDrawer from '../store';
 	export let skillObj;
-	export let skillFunction;
-	import { skillDrawer } from '../routes/+page.svelte';
 
 	function handleSkillClick(object) {
 		var skillCard = document.getElementById('skill-card-main');
 		var responsive_class_name = 'responsive';
 		skillCard.classList.toggle(responsive_class_name);
-		console.log(skillCard.classList);
-		console.log(skillDrawer);
+		console.log('this is the classlist:', skillCard.classList);
+		console.log('this is the drawer:' /*skillDrawer*/);
 	}
 </script>
 
@@ -25,8 +24,8 @@
 
 <style>
 	.main-skill-div {
-		width: 14rem;
-		height: 8rem;
+		width: 200px;
+		height: 120px;
 		font-size: xx-large;
 		display: flex;
 		flex-direction: column;
@@ -38,8 +37,8 @@
 		transition: all 0.5s;
 	}
 	.skill-img {
-		height: 4rem;
-		width: 4rem;
+		height: 60px;
+		width: 60px;
 	}
 	#skill-1 {
 		position: absolute;
@@ -50,29 +49,29 @@
 	}
 	#skill-2 {
 		position: absolute;
-		left: 600px;
+		left: 500px;
 		right: 0;
-		top: 280px;
+		top: 210px;
 		margin: 0 auto;
 	}
 	#skill-3 {
 		position: absolute;
 		left: 0px;
-		right: 600px;
-		top: 280px;
+		right: 500px;
+		top: 210px;
 		margin: 0 auto;
 	}
 	#skill-4 {
 		position: absolute;
 		left: 0;
-		right: 900px;
+		right: 700px;
 		top: 0;
 		bottom: 0;
 		margin: auto auto;
 	}
 	#skill-5 {
 		position: absolute;
-		left: 900px;
+		left: 700px;
 		right: 0;
 		top: 0;
 		bottom: 0;
@@ -81,15 +80,15 @@
 	#skill-6 {
 		position: absolute;
 		left: 0;
-		right: 600px;
-		bottom: 280px;
+		right: 500px;
+		bottom: 210px;
 		margin: 0 auto;
 	}
 	#skill-7 {
 		position: absolute;
-		left: 600px;
+		left: 500px;
 		right: 0;
-		bottom: 280px;
+		bottom: 210px;
 		margin: 0 auto;
 	}
 	#skill-8 {
