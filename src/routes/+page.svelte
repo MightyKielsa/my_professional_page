@@ -6,9 +6,9 @@
 	import ProjectCard from '../lib/ProjectCard.svelte';
 
 	const projectsArr = [
-		{ projectImg: '', projectName: 'Bootcamper Adiutor', projectDescription: '' },
-		{ projectImg: '', projectName: 'Bootcamper Adiutor', projectDescription: '' },
-		{ projectImg: '', projectName: 'Bootcamper Adiutor', projectDescription: '' }
+		{ projectImg: '', projectName: 'Bootcamper Adiutor', projectDescription: 'blah blah blah' },
+		{ projectImg: '', projectName: 'Bootcamper Adiutor', projectDescription: 'blah blah blah' },
+		{ projectImg: '', projectName: 'Bootcamper Adiutor', projectDescription: 'blah blah blah' }
 	];
 
 	const skillsArr = [
@@ -69,7 +69,46 @@
 			info: 'blah blah blah'
 		}
 	];
-	let hobbiesArr = ['Technology', 'Boxing', 'Reading', 'Gaming', 'Warhammer 40k', 'LotR'];
+	let hobbiesArr = [
+		{ hobbyName: 'Technology', img: 'https://cdn-icons-png.flaticon.com/512/901/901002.png' },
+		{ hobbyName: 'Boxing', img: 'https://cdn-icons-png.flaticon.com/512/2112/2112110.png' },
+		{ hobbyName: 'Reading', img: 'https://cdn-icons-png.flaticon.com/512/3389/3389081.png' },
+		{ hobbyName: 'Gaming', img: 'https://cdn-icons-png.flaticon.com/512/3097/3097980.png' },
+		{ hobbyName: 'Warhammer 40k', img: 'https://cdn-icons-png.flaticon.com/512/2917/2917780.png' },
+		{ hobbyName: 'LotR', img: 'https://cdn-icons-png.flaticon.com/512/4329/4329718.png' }
+	];
+	let booksArr = [
+		{
+			bookName: 'Zero to One',
+			author: 'Peter Thiel',
+			img: 'https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1630663027i/18050143.jpg'
+		},
+		{
+			bookName: 'Thus Spoke Zarathustra',
+			author: 'Friedrich Nietzsche',
+			img: 'https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1650680683i/51893.jpg'
+		},
+		{
+			bookName: 'Elon Musk',
+			author: 'Ashlee Vance',
+			img: 'https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1518291452i/25541028.jpg'
+		},
+		{
+			bookName: 'The Republic',
+			author: 'Plato',
+			img: 'https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1386925655i/30289.jpg'
+		},
+		{
+			bookName: 'The Innovators',
+			author: 'Isaacson Walter',
+			img: 'https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1410191571i/21856367.jpg'
+		},
+		{
+			bookName: 'Creativity, Inc.',
+			author: 'Ed Catmull',
+			img: 'https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1400863577i/18077903.jpg'
+		}
+	];
 
 	export const skillDrawer = writable('hello');
 </script>
@@ -95,11 +134,6 @@
 					extremely painful.
 				</p>
 			</div>
-			<!-- <img
-				class="main-photo"
-				alt="Patryk kielsa sitting on a chair"
-				src="/IMG_20220524_181536_107.png"
-			/> -->
 		</section>
 		<section class="skills-section-main-div">
 			<div class="skills-list-div">
@@ -128,15 +162,24 @@
 		<section class="personal-corner-main-div">
 			<h2>Personal corner</h2>
 			<div class="personal-corner-content-div">
-				<ul aria-label="Hobbies">
+				<ul aria-label="Hobbies" class="main-page-list">
 					{#each hobbiesArr as hobby}
-						<li>{hobby}</li>
+						<li class="hobby-list-item">
+							<p>{hobby.hobbyName}</p>
+							<img src={hobby.img} class="hobby-img" alt="hobby icon" />
+						</li>
 					{/each}
 				</ul>
-				<ul aria-label="Favourite Books">
-					<li>l1</li>
-					<li>l2</li>
-					<li>l3</li>
+				<ul aria-label="Favourite Books" class="main-page-list">
+					{#each booksArr as book}
+						<li class="book-list-item">
+							<div>
+								<p class="book-name-p">{book.bookName}</p>
+								<p class="author-p">{book.author}</p>
+							</div>
+							<img src={book.img} class="book-img" alt="book cover" />
+						</li>
+					{/each}
 				</ul>
 			</div>
 		</section>
@@ -296,8 +339,29 @@
 		font-size: 130%;
 		list-style: none;
 		box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.5);
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
 	}
 	.personal-corner-content-div li {
-		margin-top: 20px;
+		margin-top: 10px;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	.author-p {
+		font-size: 80%;
+		font-style: italic;
+	}
+
+	.book-img {
+		width: auto;
+		height: 4rem;
+	}
+
+	.hobby-img {
+		width: auto;
+		height: 4rem;
 	}
 </style>
