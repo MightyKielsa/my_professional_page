@@ -1,21 +1,30 @@
 <script>
+	import { getContext } from 'svelte';
+
+	const skillContext = getContext('skillContext');
 	const projectsArr = [
 		{ projectName: 'Bootcam Adiutor' },
 		{ projectName: 'Weather App' },
 		{ projectName: 'turnUp' }
 	];
+
+	function onXClick() {
+		var skillCard = document.getElementById('skill-card-main');
+		skillCard.style.right = '-1000px';
+	}
 </script>
 
 <main id="skill-card-main">
 	<div class="skill-card-container">
+		<img src="/x-icon.png" alt="close button" class="close-button" on:click={onXClick} />
 		<div class="skill-card-header">
-			<img src="/js.png" alt="logo" class="skill-card-img" />
-			<h3>Javascript</h3>
+			<img src={$skillContext.skillImg} alt="logo" class="skill-card-img" />
+			<h3>{$skillContext.skillName}</h3>
 		</div>
-		<p><b>Desription: </b> info about the skill</p>
+		<p><b>Desription: </b> {$skillContext.info}</p>
 		<b>Projects: </b>
 		<ul>
-			{#each projectsArr as project}
+			{#each $skillContext.projectsArr as project}
 				<li>{project.projectName}</li>
 			{/each}
 		</ul>
@@ -28,30 +37,29 @@
 		width: 45%;
 		background-color: rgba(0, 0, 0, 0.5);
 		position: absolute;
-		right: 0;
+		right: -1000px;
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		font-size: 24px
-		;
+		font-size: 24px;
+		transition: all 0.5s;
 	}
-
 	.skill-card-container {
 		width: 500px;
-		height: 400px;
+		height: 450px;
 		background-color: var(--background);
 		border-radius: 24px;
 		border: solid;
 		border-color: var(--primary-tint2);
 		display: flex;
 		flex-direction: column;
-		justify-content: center;
 		align-items: center;
 		box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.5);
+		position: relative;
 	}
 
 	.skill-card-container h3 {
-		font-size: 50px;
+		font-size: 40px;
 	}
 
 	.skill-card-img {
@@ -63,5 +71,16 @@
 		justify-content: center;
 		align-items: center;
 		gap: 2rem;
+	}
+
+	.close-button {
+		height: 40px;
+		position: absolute;
+		top: 10px;
+		right: 10px;
+		color: var(--primary-font-dark);
+	}
+	.close-button:hover {
+		cursor: pointer;
 	}
 </style>

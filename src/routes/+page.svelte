@@ -2,8 +2,22 @@
 	import Navbar from '../lib/Navbar.svelte';
 	import Skill from '../lib/Skill.svelte';
 	import SkillCard from '../lib/SkillCard.svelte';
-	import { writable } from 'svelte/store';
 	import ProjectCard from '../lib/ProjectCard.svelte';
+	import { setContext } from 'svelte';
+	import { writable } from 'svelte/store';
+
+	const skillStore = writable({
+		skillName: 'Loading',
+		skillImg: '/typescript.png',
+		skillAlt: 'loading',
+		skillId: 2,
+		info: '...loading'
+	});
+	setContext('skillContext', skillStore);
+
+	function onSkillClick(newSkillObj) {
+		skillStore.set(newSkillObj);
+	}
 
 	const projectsArr = [
 		{ projectImg: '', projectName: 'Bootcamper Adiutor', projectDescription: 'blah blah blah' },
@@ -17,56 +31,77 @@
 			skillImg: '/js.png',
 			skillAlt: 'JS icon',
 			skillId: 1,
-			info: 'blah blah blah'
+			info: 'blah blah blah',
+			projectsArr: [
+				{ projectName: 'Bootcam Adiutor' },
+				{ projectName: 'Weather App' },
+				{ projectName: 'turnUp' }
+			]
 		},
 		{
 			skillName: 'Typescript',
 			skillImg: '/typescript.png',
 			skillAlt: 'Typescript icon',
 			skillId: 2,
-			info: 'blah blah blah'
+			info: 'blah blah blah',
+			projectsArr: [{ projectName: 'Weather App' }]
 		},
 		{
 			skillName: 'HTML/CSS',
 			skillImg: '/html.png',
 			skillAlt: 'HTML and CSS icon',
 			skillId: 3,
-			info: 'blah blah blah'
+			info: 'blah blah blah',
+			projectsArr: [
+				{ projectName: 'Bootcam Adiutor' },
+				{ projectName: 'Weather App' },
+				{ projectName: 'turnUp' },
+				{ projectName: 'This page!' }
+			]
 		},
 		{
 			skillName: 'React',
 			skillImg: '/atom.png',
 			skillAlt: 'React icon',
 			skillId: 4,
-			info: 'blah blah blah'
+			info: 'blah blah blah',
+			projectsArr: [
+				{ projectName: 'Bootcam Adiutor' },
+				{ projectName: 'Weather App' },
+				{ projectName: 'turnUp' }
+			]
 		},
 		{
 			skillName: 'Svelte',
 			skillImg: '/svelte.png',
 			skillAlt: 'Svelte icon',
 			skillId: 5,
-			info: 'blah blah blah'
+			info: 'blah blah blah',
+			projectsArr: [{ projectName: 'This page!' }]
 		},
 		{
 			skillName: 'Node.js',
 			skillImg: '/node-js.png',
 			skillAlt: 'Node icon',
 			skillId: 6,
-			info: 'blah blah blah'
+			info: 'blah blah blah',
+			projectsArr: [{ projectName: 'Bootcam Adiutor' }, { projectName: 'turnUp' }]
 		},
 		{
 			skillName: 'SQL',
 			skillImg: '/sql-server.png',
 			skillAlt: 'SQL icon',
 			skillId: 7,
-			info: 'blah blah blah'
+			info: 'blah blah blah',
+			projectsArr: [{ projectName: 'Bootcam Adiutor' }, { projectName: 'turnUp' }]
 		},
 		{
 			skillName: 'AWS',
 			skillImg: '/amazon-aws.png',
 			skillAlt: 'AWS icon',
 			skillId: 8,
-			info: 'blah blah blah'
+			info: 'blah blah blah',
+			projectsArr: [{ projectName: 'turnUp' }]
 		}
 	];
 	let hobbiesArr = [
@@ -110,8 +145,6 @@
 			img: 'https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1400863577i/18077903.jpg'
 		}
 	];
-
-	export const skillDrawer = writable('hello');
 </script>
 
 <main>
@@ -142,7 +175,7 @@
 					<h2>TECH STACK</h2>
 				</div>
 				{#each skillsArr as skill}
-					<Skill skillObj={skill} />
+					<Skill skillObj={skill} skillFunc={onSkillClick} />
 				{/each}
 			</div>
 			<img
@@ -211,10 +244,10 @@
 		padding: 0;
 		font-family: var(--font-fam);
 	}
-
 	.main-body-element {
 		background-color: var(--background);
 		height: 392vh;
+		max-width: 100%;
 		position: absolute;
 		top: 8vh;
 		left: 0;
@@ -222,6 +255,7 @@
 		display: flex;
 		flex-direction: column;
 		align-items: center;
+		overflow-y: hidden;
 	}
 
 	h1 {
@@ -274,6 +308,7 @@
 
 	#skills-header-div {
 		width: 18vw;
+		min-width: 330px;
 		display: flex;
 		justify-content: center;
 		align-items: center;
@@ -352,6 +387,15 @@
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
+		transition: all 0.5s;
+		border-radius: 1rem;
+		padding: 6px;
+	}
+
+	.personal-corner-content-div li:hover {
+		transform: scale(1.05);
+		cursor: pointer;
+		box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.5);
 	}
 
 	.author-p {
