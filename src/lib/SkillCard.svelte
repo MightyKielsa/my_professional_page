@@ -24,7 +24,7 @@
 		<p><b>Desription: </b> {$skillContext.info}</p>
 		<b>Projects: </b>
 		<ul>
-			{#each $skillContext.projectsArr as project}
+			{#each projectsArr as project}
 				<li>{project.projectName}</li>
 			{/each}
 		</ul>
