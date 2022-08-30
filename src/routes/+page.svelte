@@ -75,7 +75,8 @@
 		{ hobbyName: 'Reading', img: 'https://cdn-icons-png.flaticon.com/512/3389/3389081.png' },
 		{ hobbyName: 'Gaming', img: 'https://cdn-icons-png.flaticon.com/512/3097/3097980.png' },
 		{ hobbyName: 'Warhammer 40k', img: 'https://cdn-icons-png.flaticon.com/512/2917/2917780.png' },
-		{ hobbyName: 'LotR', img: 'https://cdn-icons-png.flaticon.com/512/4329/4329718.png' }
+		{ hobbyName: 'Darts', img: 'https://cdn-icons-png.flaticon.com/512/3292/3292137.png' },
+		{ hobbyName: 'Ancient History', img: 'https://cdn-icons-png.flaticon.com/512/2234/2234770.png' }
 	];
 	let booksArr = [
 		{
@@ -190,24 +191,24 @@
 	@import url('https://fonts.googleapis.com/css2?family=Reem+Kufi&display=swap');
 	:root {
 		--primary: #003459;
-		--secondary: #a37b73;
+		--primary-tint1: #18527a;
+		--primary-tint2: #719dbd;
+		--primary-font-light: #e5f8fe;
+		--primary-font-dark: #001524;
+		--secondary: #83635d;
+		--secondary-tint1: #a37b73;
+		--secondary-tint2: #b6928b;
 		--supporting-1: #489fb5;
 		--supporting-2: #e09f3e;
 		--background: #fafafa;
 		--font-fam: 'Reem Kufi', sans-serif;
+		color: var(--primary-font-dark);
+		font-size: 24px;
 	}
-	/* :root {
-		--primary: #324376;
-		--secondary: #586ba4;
-		--supporting-1: #f5dd90;
-		--supporting-2: #f68e5f;
-		--supporting-3: #f76c5e;
-	} */
 
 	* {
 		margin: 0;
 		padding: 0;
-
 		font-family: var(--font-fam);
 	}
 
@@ -223,11 +224,17 @@
 		align-items: center;
 	}
 
-	/*____________________________ABOUT ME SECTION___________________________*/
-	.main-body-element h1 {
-		font-size: 400%;
+	h1 {
 		margin-top: 3vh;
+		font-size: 60px;
+		font-weight: 600;
 	}
+
+	h2 {
+		font-size: 50px;
+		font-weight: 600;
+	}
+	/*____________________________ABOUT ME SECTION___________________________*/
 
 	.top-horizontal-img {
 		width: 100%;
@@ -239,14 +246,12 @@
 	.about-me {
 		display: flex;
 		width: 80%;
-		font-size: 100%;
 		text-align: center;
 		height: 47vh;
 	}
 
 	.about-me p {
-		margin-top: 2rem;
-		font-size: 150%;
+		margin-top: 48px;
 	}
 
 	/*____________________________SKILLS SECTION___________________________*/
@@ -258,7 +263,7 @@
 
 	.skills-list-div {
 		width: 55%;
-		background-color: var(--secondary);
+		background-color: var(--secondary-tint1);
 		position: relative;
 	}
 	.main-vertical-img {
@@ -268,14 +273,14 @@
 	}
 
 	#skills-header-div {
-		font-size: xx-large;
 		width: 18vw;
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		height: 10rem;
-		background-color: var(--supporting-1);
-		border-radius: 1rem;
+		height: 120px;
+		background-color: var(--primary-tint1);
+		color: var(--primary-font-light);
+		border-radius: 24px;
 		box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.5);
 		position: absolute;
 		left: 0;
@@ -295,12 +300,11 @@
 	}
 
 	.projects-section-main-div h2 {
-		font-size: 3rem;
-		margin-top: 3rem;
+		margin-top: 2rem;
 	}
 
 	.project-cards-row {
-		margin-top: 3rem;
+		margin-top: 2rem;
 		display: flex;
 		justify-content: space-evenly;
 	}
@@ -309,12 +313,11 @@
 
 	.personal-corner-main-div {
 		height: 94vh;
-		background-color: var(--secondary);
+		background-color: var(--secondary-tint1);
 		width: 100%;
 	}
 	.personal-corner-main-div h2 {
-		font-size: 3rem;
-		margin-top: 3rem;
+		margin-top: 2rem;
 		text-align: center;
 	}
 	.personal-corner-content-div {
@@ -325,15 +328,16 @@
 	}
 	.personal-corner-content-div ul:before {
 		content: attr(aria-label);
-		font-size: 140%;
+		font-size: 120%;
 		font-weight: bold;
 		margin-left: -15px;
 	}
 
 	.personal-corner-content-div ul {
 		background-color: var(--background);
+		font-size: 18px;
 		width: 300px;
-		height: 70%;
+		height: 600px;
 		padding: 2rem;
 		border-radius: 2rem;
 		font-size: 130%;
@@ -353,15 +357,16 @@
 	.author-p {
 		font-size: 80%;
 		font-style: italic;
+		line-height: 1;
 	}
 
 	.book-img {
 		width: auto;
-		height: 4rem;
+		height: 60px;
 	}
 
 	.hobby-img {
 		width: auto;
-		height: 4rem;
+		height: 60px;
 	}
 </style>

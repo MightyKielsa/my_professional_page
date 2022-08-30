@@ -32,16 +32,17 @@
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		font-size: x-large;
+		font-size: 24px
+		;
 	}
 
 	.skill-card-container {
 		width: 500px;
 		height: 400px;
 		background-color: var(--background);
-		border-radius: 1rem;
+		border-radius: 24px;
 		border: solid;
-		border-color: var(--supporting-1);
+		border-color: var(--primary-tint2);
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
@@ -50,7 +51,7 @@
 	}
 
 	.skill-card-container h3 {
-		font-size: xx-large;
+		font-size: 50px;
 	}
 
 	.skill-card-img {
@@ -61,6 +62,6 @@
 		width: 100%;
 		justify-content: center;
 		align-items: center;
-		gap: 3rem;
+		gap: 2rem;
 	}
 </style>
