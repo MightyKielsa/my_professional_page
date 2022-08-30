@@ -4,6 +4,8 @@
 
 	function handleSkillClick(object) {
 		skillFunc(object);
+		var skillCard = document.getElementById('skill-card-main');
+		skillCard.style.right = 0;
 	}
 </script>
 

@@ -2,7 +2,6 @@
 	import { getContext } from 'svelte';
 
 	const skillContext = getContext('skillContext');
-
 	const projectsArr = [
 		{ projectName: 'Bootcam Adiutor' },
 		{ projectName: 'Weather App' },
@@ -32,13 +31,13 @@
 		width: 45%;
 		background-color: rgba(0, 0, 0, 0.5);
 		position: absolute;
-		right: 0;
+		right: -1000px;
 		display: flex;
 		align-items: center;
 		justify-content: center;
 		font-size: 24px;
+		transition: all 0.5s;
 	}
-
 	.skill-card-container {
 		width: 500px;
 		height: 450px;
