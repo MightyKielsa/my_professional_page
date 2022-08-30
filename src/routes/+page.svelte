@@ -352,6 +352,15 @@
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
+		transition: all 0.5s;
+		border-radius: 1rem;
+		padding: 6px;
+	}
+
+	.personal-corner-content-div li:hover {
+		transform: scale(1.05);
+		cursor: pointer;
+		box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.5);
 	}
 
 	.author-p {
