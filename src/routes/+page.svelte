@@ -31,56 +31,77 @@
 			skillImg: '/js.png',
 			skillAlt: 'JS icon',
 			skillId: 1,
-			info: 'blah blah blah'
+			info: 'blah blah blah',
+			projectsArr: [
+				{ projectName: 'Bootcam Adiutor' },
+				{ projectName: 'Weather App' },
+				{ projectName: 'turnUp' }
+			]
 		},
 		{
 			skillName: 'Typescript',
 			skillImg: '/typescript.png',
 			skillAlt: 'Typescript icon',
 			skillId: 2,
-			info: 'blah blah blah'
+			info: 'blah blah blah',
+			projectsArr: [{ projectName: 'Weather App' }]
 		},
 		{
 			skillName: 'HTML/CSS',
 			skillImg: '/html.png',
 			skillAlt: 'HTML and CSS icon',
 			skillId: 3,
-			info: 'blah blah blah'
+			info: 'blah blah blah',
+			projectsArr: [
+				{ projectName: 'Bootcam Adiutor' },
+				{ projectName: 'Weather App' },
+				{ projectName: 'turnUp' },
+				{ projectName: 'This page!' }
+			]
 		},
 		{
 			skillName: 'React',
 			skillImg: '/atom.png',
 			skillAlt: 'React icon',
 			skillId: 4,
-			info: 'blah blah blah'
+			info: 'blah blah blah',
+			projectsArr: [
+				{ projectName: 'Bootcam Adiutor' },
+				{ projectName: 'Weather App' },
+				{ projectName: 'turnUp' }
+			]
 		},
 		{
 			skillName: 'Svelte',
 			skillImg: '/svelte.png',
 			skillAlt: 'Svelte icon',
 			skillId: 5,
-			info: 'blah blah blah'
+			info: 'blah blah blah',
+			projectsArr: [{ projectName: 'This page!' }]
 		},
 		{
 			skillName: 'Node.js',
 			skillImg: '/node-js.png',
 			skillAlt: 'Node icon',
 			skillId: 6,
-			info: 'blah blah blah'
+			info: 'blah blah blah',
+			projectsArr: [{ projectName: 'Bootcam Adiutor' }, { projectName: 'turnUp' }]
 		},
 		{
 			skillName: 'SQL',
 			skillImg: '/sql-server.png',
 			skillAlt: 'SQL icon',
 			skillId: 7,
-			info: 'blah blah blah'
+			info: 'blah blah blah',
+			projectsArr: [{ projectName: 'Bootcam Adiutor' }, { projectName: 'turnUp' }]
 		},
 		{
 			skillName: 'AWS',
 			skillImg: '/amazon-aws.png',
 			skillAlt: 'AWS icon',
 			skillId: 8,
-			info: 'blah blah blah'
+			info: 'blah blah blah',
+			projectsArr: [{ projectName: 'turnUp' }]
 		}
 	];
 	let hobbiesArr = [
@@ -223,10 +244,10 @@
 		padding: 0;
 		font-family: var(--font-fam);
 	}
-
 	.main-body-element {
 		background-color: var(--background);
 		height: 392vh;
+		max-width: 100%;
 		position: absolute;
 		top: 8vh;
 		left: 0;
@@ -234,6 +255,7 @@
 		display: flex;
 		flex-direction: column;
 		align-items: center;
+		overflow-y: hidden;
 	}
 
 	h1 {
@@ -286,6 +308,7 @@
 
 	#skills-header-div {
 		width: 18vw;
+		min-width: 330px;
 		display: flex;
 		justify-content: center;
 		align-items: center;
