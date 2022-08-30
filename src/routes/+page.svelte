@@ -11,7 +11,8 @@
 		skillImg: '/typescript.png',
 		skillAlt: 'loading',
 		skillId: 2,
-		info: '...loading'
+		info: '...loading',
+		projectsArr: [{ projectName: 'Loading' }]
 	});
 	setContext('skillContext', skillStore);
 
