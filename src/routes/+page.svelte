@@ -12,7 +12,7 @@
 		skillAlt: 'loading',
 		skillId: 2,
 		info: '...loading',
-		projectsArr: [{ projectName: 'Loading' }]
+		projectsArr: [{ projectName: 'Loading', projectUrl: 'www.google.com' }]
 	});
 	setContext('skillContext', skillStore);
 
@@ -21,9 +21,44 @@
 	}
 
 	const projectsArr = [
-		{ projectImg: '', projectName: 'Bootcamper Adiutor', projectDescription: 'blah blah blah' },
-		{ projectImg: '', projectName: 'Bootcamper Adiutor', projectDescription: 'blah blah blah' },
-		{ projectImg: '', projectName: 'Bootcamper Adiutor', projectDescription: 'blah blah blah' }
+		{
+			projectImg: '/turnup_1.PNG',
+			projectName: 'turnUp',
+			projectDescription:
+				'Free Local Event App. Allows the user to create and find free events in their area.',
+			techArr: [
+				{ techImg: '/html.png', techName: 'HTML & CSS' },
+				{ techImg: '/js.png', techName: 'Javascript' },
+				{ techImg: '/atom.png', techName: 'React' },
+				{ techImg: '/node-js.png', techName: 'Node.js' },
+				{ techImg: '/sql-server.png', techName: 'SQL' }
+			]
+		},
+		{
+			projectImg: '/bc_helper.PNG',
+			projectName: 'Bootcamper Adiutor',
+			projectDescription:
+				'An app helping bootcampers to keep track of their notes, resources and problems.',
+			techArr: [
+				{ techImg: '/html.png', techName: 'HTML & CSS' },
+				{ techImg: '/js.png', techName: 'Javascript' },
+				{ techImg: '/atom.png', techName: 'React' },
+				{ techImg: '/node-js.png', techName: 'Node.js' },
+				{ techImg: '/amazon-aws.png', techName: 'AWS' }
+			]
+		},
+		{
+			projectImg: '/weather_app.PNG',
+			projectName: 'Weather App',
+			projectDescription:
+				'A weather app allowing you to check the weather conditions in large cities',
+			techArr: [
+				{ techImg: '/html.png', techName: 'HTML & CSS' },
+				{ techImg: '/typescript.png', techName: 'Typescript' },
+				{ techImg: '/atom.png', techName: 'React' },
+				{ techImg: '/google_api.png', techName: 'Google Maps API' }
+			]
+		}
 	];
 
 	const skillsArr = [
@@ -34,9 +69,12 @@
 			skillId: 1,
 			info: 'blah blah blah',
 			projectsArr: [
-				{ projectName: 'Bootcam Adiutor' },
-				{ projectName: 'Weather App' },
-				{ projectName: 'turnUp' }
+				{
+					projectName: 'Bootcam Adiutor',
+					projectUrl: 'https://github.com/MightyKielsa/bootcamp_helper_app_project'
+				},
+				{ projectName: 'Weather App', projectUrl: '#' },
+				{ projectName: 'turnUp', projectUrl: 'https://github.com/MightyKielsa/turnUp_front-end' }
 			]
 		},
 		{
@@ -45,7 +83,7 @@
 			skillAlt: 'Typescript icon',
 			skillId: 2,
 			info: 'blah blah blah',
-			projectsArr: [{ projectName: 'Weather App' }]
+			projectsArr: [{ projectName: 'Weather App', projectUrl: '#' }]
 		},
 		{
 			skillName: 'HTML/CSS',
@@ -54,10 +92,16 @@
 			skillId: 3,
 			info: 'blah blah blah',
 			projectsArr: [
-				{ projectName: 'Bootcam Adiutor' },
-				{ projectName: 'Weather App' },
-				{ projectName: 'turnUp' },
-				{ projectName: 'This page!' }
+				{
+					projectName: 'Bootcam Adiutor',
+					projectUrl: 'https://github.com/MightyKielsa/bootcamp_helper_app_project'
+				},
+				{ projectName: 'Weather App', projectUrl: '#' },
+				{ projectName: 'turnUp', projectUrl: 'https://github.com/MightyKielsa/turnUp_front-end' },
+				{
+					projectName: 'This page!',
+					projectUrl: 'https://github.com/MightyKielsa/my_professional_page'
+				}
 			]
 		},
 		{
@@ -67,9 +111,12 @@
 			skillId: 4,
 			info: 'blah blah blah',
 			projectsArr: [
-				{ projectName: 'Bootcam Adiutor' },
-				{ projectName: 'Weather App' },
-				{ projectName: 'turnUp' }
+				{
+					projectName: 'Bootcam Adiutor',
+					projectUrl: 'https://github.com/MightyKielsa/bootcamp_helper_app_project'
+				},
+				{ projectName: 'Weather App', projectUrl: '#' },
+				{ projectName: 'turnUp', projectUrl: 'https://github.com/MightyKielsa/turnUp_front-end' }
 			]
 		},
 		{
@@ -78,7 +125,12 @@
 			skillAlt: 'Svelte icon',
 			skillId: 5,
 			info: 'blah blah blah',
-			projectsArr: [{ projectName: 'This page!' }]
+			projectsArr: [
+				{
+					projectName: 'This page!',
+					projectUrl: 'https://github.com/MightyKielsa/my_professional_page'
+				}
+			]
 		},
 		{
 			skillName: 'Node.js',
@@ -86,7 +138,13 @@
 			skillAlt: 'Node icon',
 			skillId: 6,
 			info: 'blah blah blah',
-			projectsArr: [{ projectName: 'Bootcam Adiutor' }, { projectName: 'turnUp' }]
+			projectsArr: [
+				{
+					projectName: 'Bootcam Adiutor',
+					projectUrl: 'https://github.com/MightyKielsa/bootcamp_helper_app_project'
+				},
+				{ projectName: 'turnUp', projectUrl: 'https://github.com/MightyKielsa/turnUp_front-end' }
+			]
 		},
 		{
 			skillName: 'SQL',
@@ -94,7 +152,13 @@
 			skillAlt: 'SQL icon',
 			skillId: 7,
 			info: 'blah blah blah',
-			projectsArr: [{ projectName: 'Bootcam Adiutor' }, { projectName: 'turnUp' }]
+			projectsArr: [
+				{
+					projectName: 'Bootcam Adiutor',
+					projectUrl: 'https://github.com/MightyKielsa/bootcamp_helper_app_project'
+				},
+				{ projectName: 'turnUp', projectUrl: 'https://github.com/MightyKielsa/turnUp_front-end' }
+			]
 		},
 		{
 			skillName: 'AWS',
@@ -102,7 +166,9 @@
 			skillAlt: 'AWS icon',
 			skillId: 8,
 			info: 'blah blah blah',
-			projectsArr: [{ projectName: 'turnUp' }]
+			projectsArr: [
+				{ projectName: 'turnUp', projectUrl: 'https://github.com/MightyKielsa/turnUp_front-end' }
+			]
 		}
 	];
 	let hobbiesArr = [
@@ -190,7 +256,7 @@
 			<h2>Projects:</h2>
 			<div class="project-cards-row">
 				{#each projectsArr as project}
-					<ProjectCard skillObj={project} />
+					<ProjectCard projectObj={project} />
 				{/each}
 			</div>
 		</section>
