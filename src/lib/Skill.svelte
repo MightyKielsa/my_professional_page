@@ -1,13 +1,9 @@
 <script>
-	//import skillDrawer from '../store';
 	export let skillObj;
+	export let skillFunc;
 
 	function handleSkillClick(object) {
-		var skillCard = document.getElementById('skill-card-main');
-		var responsive_class_name = 'responsive';
-		skillCard.classList.toggle(responsive_class_name);
-		console.log('this is the classlist:', skillCard.classList);
-		console.log('this is the drawer:' /*skillDrawer*/);
+		skillFunc(object);
 	}
 </script>
 

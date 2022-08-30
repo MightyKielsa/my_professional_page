@@ -2,8 +2,22 @@
 	import Navbar from '../lib/Navbar.svelte';
 	import Skill from '../lib/Skill.svelte';
 	import SkillCard from '../lib/SkillCard.svelte';
-	import { writable } from 'svelte/store';
 	import ProjectCard from '../lib/ProjectCard.svelte';
+	import { setContext } from 'svelte';
+	import { writable } from 'svelte/store';
+
+	const skillStore = writable({
+		skillName: 'Loading',
+		skillImg: '/typescript.png',
+		skillAlt: 'loading',
+		skillId: 2,
+		info: '...loading'
+	});
+	setContext('skillContext', skillStore);
+
+	function onSkillClick(newSkillObj) {
+		skillStore.set(newSkillObj);
+	}
 
 	const projectsArr = [
 		{ projectImg: '', projectName: 'Bootcamper Adiutor', projectDescription: 'blah blah blah' },
@@ -110,8 +124,6 @@
 			img: 'https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1400863577i/18077903.jpg'
 		}
 	];
-
-	export const skillDrawer = writable('hello');
 </script>
 
 <main>
@@ -142,7 +154,7 @@
 					<h2>TECH STACK</h2>
 				</div>
 				{#each skillsArr as skill}
-					<Skill skillObj={skill} />
+					<Skill skillObj={skill} skillFunc={onSkillClick} />
 				{/each}
 			</div>
 			<img

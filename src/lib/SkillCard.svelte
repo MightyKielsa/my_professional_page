@@ -1,4 +1,8 @@
 <script>
+	import { getContext } from 'svelte';
+
+	const skillContext = getContext('skillContext');
+
 	const projectsArr = [
 		{ projectName: 'Bootcam Adiutor' },
 		{ projectName: 'Weather App' },
@@ -9,10 +13,10 @@
 <main id="skill-card-main">
 	<div class="skill-card-container">
 		<div class="skill-card-header">
-			<img src="/js.png" alt="logo" class="skill-card-img" />
-			<h3>Javascript</h3>
+			<img src={$skillContext.skillImg} alt="logo" class="skill-card-img" />
+			<h3>{$skillContext.skillName}</h3>
 		</div>
-		<p><b>Desription: </b> info about the skill</p>
+		<p><b>Desription: </b> {$skillContext.info}</p>
 		<b>Projects: </b>
 		<ul>
 			{#each projectsArr as project}
@@ -32,20 +36,18 @@
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		font-size: 24px
-		;
+		font-size: 24px;
 	}
 
 	.skill-card-container {
 		width: 500px;
-		height: 400px;
+		height: 450px;
 		background-color: var(--background);
 		border-radius: 24px;
 		border: solid;
 		border-color: var(--primary-tint2);
 		display: flex;
 		flex-direction: column;
-		justify-content: center;
 		align-items: center;
 		box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.5);
 	}
