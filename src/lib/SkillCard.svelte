@@ -2,11 +2,6 @@
 	import { getContext } from 'svelte';
 
 	const skillContext = getContext('skillContext');
-	// const projectsArr = [
-	// 	{ projectName: 'Bootcam Adiutor' },
-	// 	{ projectName: 'Weather App' },
-	// 	{ projectName: 'turnUp' }
-	// ];
 
 	function onXClick() {
 		var skillCard = document.getElementById('skill-card-main');
