@@ -10,6 +10,7 @@
 	import skillsArr from '../data/skillsArr.js';
 	import hobbiesArr from '../data/hobbiesArr';
 	import booksArr from '../data/booksArr';
+	import socialArr from '../data/socialArr.js';
 
 	const skillStore = writable({
 		skillName: 'Loading',
@@ -107,7 +108,11 @@
 		</section>
 		<footer>
 			<h2>Get in touch</h2>
-			<div><SocialMedia /></div>
+			<div>
+				{#each socialArr as social}
+					<SocialMedia socialObj={social} />
+				{/each}
+			</div>
 		</footer>
 	</div>
 </main>
@@ -139,7 +144,7 @@
 	}
 	.main-body-element {
 		background-color: var(--background);
-		height: 392vh;
+		height: 400vh;
 		max-width: 100%;
 		position: absolute;
 		top: 8vh;
@@ -265,23 +270,20 @@
 		background-color: var(--background);
 		font-size: 24px;
 		width: 300px;
-		height: 680px;
+		height: 600px;
 		padding: 2rem;
 		border-radius: 2rem;
 		list-style: none;
 		box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.5);
-		display: flex;
-		flex-direction: column;
-		justify-content: space-around;
 	}
 	.personal-corner-content-div li {
-		margin-top: 10px;
+		margin-top: 6px;
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
 		transition: all 0.5s;
 		border-radius: 1rem;
-		padding: 10px;
+		padding: 8px;
 	}
 
 	.personal-corner-content-div li:hover {
