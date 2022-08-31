@@ -2,11 +2,11 @@
 	import { getContext } from 'svelte';
 
 	const skillContext = getContext('skillContext');
-	const projectsArr = [
-		{ projectName: 'Bootcam Adiutor' },
-		{ projectName: 'Weather App' },
-		{ projectName: 'turnUp' }
-	];
+	// const projectsArr = [
+	// 	{ projectName: 'Bootcam Adiutor' },
+	// 	{ projectName: 'Weather App' },
+	// 	{ projectName: 'turnUp' }
+	// ];
 
 	function onXClick() {
 		var skillCard = document.getElementById('skill-card-main');
@@ -21,17 +21,28 @@
 			<img src={$skillContext.skillImg} alt="logo" class="skill-card-img" />
 			<h3>{$skillContext.skillName}</h3>
 		</div>
-		<p><b>Desription: </b> {$skillContext.info}</p>
+		<p>{$skillContext.info}</p>
 		<b>Projects: </b>
 		<ul>
-			{#each projectsArr as project}
-				<li>{project.projectName}</li>
+			{#each $skillContext.projectsArr as project}
+				<li><a target="_blank" href={project.projectUrl}>{project.projectName}</a></li>
 			{/each}
 		</ul>
 	</div>
 </main>
 
 <style>
+	ul {
+		list-style: none;
+		margin-top: 0;
+	}
+
+	p {
+		width: 90%;
+		margin-top: 0;
+		margin-bottom: 10px;
+	}
+
 	#skill-card-main {
 		height: 92vh;
 		width: 45%;
@@ -46,7 +57,7 @@
 	}
 	.skill-card-container {
 		width: 500px;
-		height: 450px;
+		height: 500px;
 		background-color: var(--background);
 		border-radius: 24px;
 		border: solid;

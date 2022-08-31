@@ -1,24 +1,31 @@
 <script>
+	export let projectObj;
 	let techArr = ['/atom.png', '/js.png', '/node-js.png'];
 </script>
 
 <main class="main-project-card-div">
-	<img src="/code_img.jpg" class="project-card-img" />
-	<h3>Special Project</h3>
-	<div>
-		<p>Short description of the project to catch readers attention</p>
+	<img src={projectObj.projectImg} class="project-card-img" alt="application in a browser" />
+	<h3>{projectObj.projectName}</h3>
+	<div class="project-card-description">
+		<p>{projectObj.projectDescription}</p>
 	</div>
 	<div class="project-card-tech-row">
 		<p>Tech stack:</p>
-		{#each techArr as tech}
-			<img src={tech} class="project-card-tech-image" />
-		{/each}
+		<div class="tech-row-flex">
+			{#each projectObj.techArr as tech}
+				<img src={tech.techImg} class="project-card-tech-image" alt="tech logo" />
+			{/each}
+		</div>
 	</div>
 </main>
 
 <style>
+	h3 {
+		margin-top: 6px;
+		margin-bottom: 0;
+	}
 	.main-project-card-div {
-		height: 500px;
+		height: 520px;
 		width: 300px;
 		background-color: var(--background);
 		border-radius: 1rem;
@@ -28,6 +35,7 @@
 		align-items: center;
 		justify-content: space-between;
 		transition: all 0.5s;
+		line-height: 1.5;
 	}
 
 	.main-project-card-div:hover {
@@ -50,11 +58,27 @@
 
 	.project-card-tech-row {
 		justify-self: flex-end;
-		gap: 5rem;
+		height: 120px;
+		gap: 50px;
 		background-color: var(--primary);
 		color: white;
 		width: 100%;
 		border-radius: 0rem 0rem 1rem 1rem;
 		box-shadow: 0px -6px 10px rgba(0, 0, 0, 0.5);
+	}
+
+	.project-card-description {
+		height: 200px;
+		width: 90%;
+		align-self: center;
+	}
+	.project-card-description p {
+		margin: 5px;
+	}
+	.tech-row-flex {
+		display: flex;
+		justify-content: space-around;
+		width: 100%;
+		height: 30px;
 	}
 </style>

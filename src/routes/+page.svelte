@@ -11,7 +11,8 @@
 		skillImg: '/typescript.png',
 		skillAlt: 'loading',
 		skillId: 2,
-		info: '...loading'
+		info: '...loading',
+		projectsArr: [{ projectName: 'Loading', projectUrl: 'www.google.com' }]
 	});
 	setContext('skillContext', skillStore);
 
@@ -20,9 +21,44 @@
 	}
 
 	const projectsArr = [
-		{ projectImg: '', projectName: 'Bootcamper Adiutor', projectDescription: 'blah blah blah' },
-		{ projectImg: '', projectName: 'Bootcamper Adiutor', projectDescription: 'blah blah blah' },
-		{ projectImg: '', projectName: 'Bootcamper Adiutor', projectDescription: 'blah blah blah' }
+		{
+			projectImg: '/turnup_1.PNG',
+			projectName: 'turnUp',
+			projectDescription:
+				'Free Local Event App. Allows the user to create and find free events in their area.',
+			techArr: [
+				{ techImg: '/html.png', techName: 'HTML & CSS' },
+				{ techImg: '/js.png', techName: 'Javascript' },
+				{ techImg: '/atom.png', techName: 'React' },
+				{ techImg: '/node-js.png', techName: 'Node.js' },
+				{ techImg: '/sql-server.png', techName: 'SQL' }
+			]
+		},
+		{
+			projectImg: '/bc_helper.PNG',
+			projectName: 'Bootcamper Adiutor',
+			projectDescription:
+				'An app helping bootcampers to keep track of their notes, resources and problems.',
+			techArr: [
+				{ techImg: '/html.png', techName: 'HTML & CSS' },
+				{ techImg: '/js.png', techName: 'Javascript' },
+				{ techImg: '/atom.png', techName: 'React' },
+				{ techImg: '/node-js.png', techName: 'Node.js' },
+				{ techImg: '/amazon-aws.png', techName: 'AWS' }
+			]
+		},
+		{
+			projectImg: '/weather_app.PNG',
+			projectName: 'Weather App',
+			projectDescription:
+				'A weather app allowing you to check the weather conditions in large cities',
+			techArr: [
+				{ techImg: '/html.png', techName: 'HTML & CSS' },
+				{ techImg: '/typescript.png', techName: 'Typescript' },
+				{ techImg: '/atom.png', techName: 'React' },
+				{ techImg: '/google_api.png', techName: 'Google Maps API' }
+			]
+		}
 	];
 
 	const skillsArr = [
@@ -31,11 +67,14 @@
 			skillImg: '/js.png',
 			skillAlt: 'JS icon',
 			skillId: 1,
-			info: 'blah blah blah',
+			info: 'I learned JS during an intensive bootcamp at School of Code. Most of my projecs are currently written in this language',
 			projectsArr: [
-				{ projectName: 'Bootcam Adiutor' },
-				{ projectName: 'Weather App' },
-				{ projectName: 'turnUp' }
+				{
+					projectName: 'Bootcam Adiutor',
+					projectUrl: 'https://github.com/MightyKielsa/bootcamp_helper_app_project'
+				},
+				{ projectName: 'Weather App', projectUrl: '#' },
+				{ projectName: 'turnUp', projectUrl: 'https://github.com/MightyKielsa/turnUp_front-end' }
 			]
 		},
 		{
@@ -43,20 +82,26 @@
 			skillImg: '/typescript.png',
 			skillAlt: 'Typescript icon',
 			skillId: 2,
-			info: 'blah blah blah',
-			projectsArr: [{ projectName: 'Weather App' }]
+			info: 'I was introduced to Typesctipt by School of Code, one of my projects is written in this JS superset.',
+			projectsArr: [{ projectName: 'Weather App', projectUrl: '#' }]
 		},
 		{
 			skillName: 'HTML/CSS',
 			skillImg: '/html.png',
 			skillAlt: 'HTML and CSS icon',
 			skillId: 3,
-			info: 'blah blah blah',
+			info: 'I got introduced to the basics of HTML and CSS in secondary school. I decided re-learn it as part of my career change plan.',
 			projectsArr: [
-				{ projectName: 'Bootcam Adiutor' },
-				{ projectName: 'Weather App' },
-				{ projectName: 'turnUp' },
-				{ projectName: 'This page!' }
+				{
+					projectName: 'Bootcam Adiutor',
+					projectUrl: 'https://github.com/MightyKielsa/bootcamp_helper_app_project'
+				},
+				{ projectName: 'Weather App', projectUrl: '#' },
+				{ projectName: 'turnUp', projectUrl: 'https://github.com/MightyKielsa/turnUp_front-end' },
+				{
+					projectName: 'This page!',
+					projectUrl: 'https://github.com/MightyKielsa/my_professional_page'
+				}
 			]
 		},
 		{
@@ -64,11 +109,14 @@
 			skillImg: '/atom.png',
 			skillAlt: 'React icon',
 			skillId: 4,
-			info: 'blah blah blah',
+			info: 'School of Code provided me not only with fundamentals of JS, but also allowed me to explore React and concepts necessary for learning other frameworks.',
 			projectsArr: [
-				{ projectName: 'Bootcam Adiutor' },
-				{ projectName: 'Weather App' },
-				{ projectName: 'turnUp' }
+				{
+					projectName: 'Bootcam Adiutor',
+					projectUrl: 'https://github.com/MightyKielsa/bootcamp_helper_app_project'
+				},
+				{ projectName: 'Weather App', projectUrl: '#' },
+				{ projectName: 'turnUp', projectUrl: 'https://github.com/MightyKielsa/turnUp_front-end' }
 			]
 		},
 		{
@@ -76,32 +124,51 @@
 			skillImg: '/svelte.png',
 			skillAlt: 'Svelte icon',
 			skillId: 5,
-			info: 'blah blah blah',
-			projectsArr: [{ projectName: 'This page!' }]
+			info: "I heard about Svelte from a person close to me, and I decided to explore it as part of my learning journey. I fell in love with it's simplicity and efficiency",
+			projectsArr: [
+				{
+					projectName: 'This page!',
+					projectUrl: 'https://github.com/MightyKielsa/my_professional_page'
+				}
+			]
 		},
 		{
 			skillName: 'Node.js',
 			skillImg: '/node-js.png',
 			skillAlt: 'Node icon',
 			skillId: 6,
-			info: 'blah blah blah',
-			projectsArr: [{ projectName: 'Bootcam Adiutor' }, { projectName: 'turnUp' }]
+			info: 'Since front-end is only half the story, I learned node.js and the magic of the back end at School of Code. I used this framework in all of my full-stack projects',
+			projectsArr: [
+				{
+					projectName: 'Bootcam Adiutor',
+					projectUrl: 'https://github.com/MightyKielsa/bootcamp_helper_app_project'
+				},
+				{ projectName: 'turnUp', projectUrl: 'https://github.com/MightyKielsa/turnUp_front-end' }
+			]
 		},
 		{
 			skillName: 'SQL',
 			skillImg: '/sql-server.png',
 			skillAlt: 'SQL icon',
 			skillId: 7,
-			info: 'blah blah blah',
-			projectsArr: [{ projectName: 'Bootcam Adiutor' }, { projectName: 'turnUp' }]
+			info: 'More specifically PostgreSQL! It was taugth to me as a tool for managing relational databases and me and my teams used it in most of our projects.',
+			projectsArr: [
+				{
+					projectName: 'Bootcam Adiutor',
+					projectUrl: 'https://github.com/MightyKielsa/bootcamp_helper_app_project'
+				},
+				{ projectName: 'turnUp', projectUrl: 'https://github.com/MightyKielsa/turnUp_front-end' }
+			]
 		},
 		{
 			skillName: 'AWS',
 			skillImg: '/amazon-aws.png',
 			skillAlt: 'AWS icon',
 			skillId: 8,
-			info: 'blah blah blah',
-			projectsArr: [{ projectName: 'turnUp' }]
+			info: 'Me and my team used AWS Amplify and Cognito in our project TurnUp to handle deployment and authentication, despite a steep learning curve it is a great tool to work with.',
+			projectsArr: [
+				{ projectName: 'turnUp', projectUrl: 'https://github.com/MightyKielsa/turnUp_front-end' }
+			]
 		}
 	];
 	let hobbiesArr = [
@@ -160,13 +227,22 @@
 			<div class="about-me-div">
 				<h1>Hi I'm Patryk Kielsa, nice to meet you!</h1>
 				<p>
-					But I must explain to you how all this mistaken idea of denouncing pleasure and praising
-					pain was born and I will give you a complete account of the system, and expound the actual
-					teachings of the great explorer of the truth, the master-builder of human happiness. No
-					one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because
-					those who do not know how to pursue pleasure rationally encounter consequences that are
-					extremely painful.
+					<b>"How did you end up as a software engineer?"</b> - you're most likely not asking, but I'll
+					answer it anyway. I started my adventure with programming when I was still in secondary school
+					back in Poland, however the spark that lighted my interest in technology came somewhat later.
+					I was im my second year of Business and Events Management at the University of the West of
+					England, when I realised it wasn't for me.
 				</p>
+				<p>
+					So I started leaning <b>Python and the basics of electronic circuits</b> in my free time.
+					Unfortunately, by the end of my third year things got manic and I had to put my new hobby
+					on the back burner. I received my degree and worked as a <b>trade show manager</b> for 2
+					years. While I learned many invaluable lessons during that time, I still felt unfulfilled.
+					The pandemic helped me with the decision to quit by taking it out of my hand. So I picked
+					up a temporary job as a delivery driver and not-so-soon after I made a decision
+					<b>to change my career path and attend an intensive bootcamp</b> at School of Code.
+				</p>
+				<p>And so I learned...</p>
 			</div>
 		</section>
 		<section class="skills-section-main-div">
@@ -189,7 +265,7 @@
 			<h2>Projects:</h2>
 			<div class="project-cards-row">
 				{#each projectsArr as project}
-					<ProjectCard skillObj={project} />
+					<ProjectCard projectObj={project} />
 				{/each}
 			</div>
 		</section>
@@ -236,7 +312,8 @@
 		--background: #fafafa;
 		--font-fam: 'Reem Kufi', sans-serif;
 		color: var(--primary-font-dark);
-		font-size: 24px;
+		font-size: 22px;
+		line-height: 1.7;
 	}
 
 	* {
@@ -259,8 +336,8 @@
 	}
 
 	h1 {
-		margin-top: 3vh;
-		font-size: 60px;
+		margin-top: 1vh;
+		font-size: 50px;
 		font-weight: 600;
 	}
 
@@ -279,13 +356,13 @@
 
 	.about-me {
 		display: flex;
-		width: 80%;
+		width: 74%;
 		text-align: center;
 		height: 47vh;
 	}
 
 	.about-me p {
-		margin-top: 48px;
+		margin-top: 20px;
 	}
 
 	/*____________________________SKILLS SECTION___________________________*/
