@@ -21,7 +21,7 @@
 			<img src={$skillContext.skillImg} alt="logo" class="skill-card-img" />
 			<h3>{$skillContext.skillName}</h3>
 		</div>
-		<p><b>Desription: </b> {$skillContext.info}</p>
+		<p>{$skillContext.info}</p>
 		<b>Projects: </b>
 		<ul>
 			{#each $skillContext.projectsArr as project}
@@ -34,6 +34,13 @@
 <style>
 	ul {
 		list-style: none;
+		margin-top: 0;
+	}
+
+	p {
+		width: 90%;
+		margin-top: 0;
+		margin-bottom: 10px;
 	}
 
 	#skill-card-main {
@@ -50,7 +57,7 @@
 	}
 	.skill-card-container {
 		width: 500px;
-		height: 450px;
+		height: 500px;
 		background-color: var(--background);
 		border-radius: 24px;
 		border: solid;
