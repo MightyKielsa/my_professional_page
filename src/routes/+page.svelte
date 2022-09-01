@@ -3,8 +3,14 @@
 	import Skill from '../lib/Skill.svelte';
 	import SkillCard from '../lib/SkillCard.svelte';
 	import ProjectCard from '../lib/ProjectCard.svelte';
+	import SocialMedia from '../lib/SocialMedia.svelte';
 	import { setContext } from 'svelte';
 	import { writable } from 'svelte/store';
+	import projectsArr from '../data/projectsArr';
+	import skillsArr from '../data/skillsArr.js';
+	import hobbiesArr from '../data/hobbiesArr';
+	import booksArr from '../data/booksArr';
+	import socialArr from '../data/socialArr.js';
 
 	const skillStore = writable({
 		skillName: 'Loading',
@@ -19,199 +25,6 @@
 	function onSkillClick(newSkillObj) {
 		skillStore.set(newSkillObj);
 	}
-
-	const projectsArr = [
-		{
-			projectImg: '/turnup_1.PNG',
-			projectName: 'turnUp',
-			projectDescription:
-				'Free Local Event App. Allows the user to create and find free events in their area.',
-			techArr: [
-				{ techImg: '/html.png', techName: 'HTML & CSS' },
-				{ techImg: '/js.png', techName: 'Javascript' },
-				{ techImg: '/atom.png', techName: 'React' },
-				{ techImg: '/node-js.png', techName: 'Node.js' },
-				{ techImg: '/sql-server.png', techName: 'SQL' }
-			]
-		},
-		{
-			projectImg: '/bc_helper.PNG',
-			projectName: 'Bootcamper Adiutor',
-			projectDescription:
-				'An app helping bootcampers to keep track of their notes, resources and problems.',
-			techArr: [
-				{ techImg: '/html.png', techName: 'HTML & CSS' },
-				{ techImg: '/js.png', techName: 'Javascript' },
-				{ techImg: '/atom.png', techName: 'React' },
-				{ techImg: '/node-js.png', techName: 'Node.js' },
-				{ techImg: '/amazon-aws.png', techName: 'AWS' }
-			]
-		},
-		{
-			projectImg: '/weather_app.PNG',
-			projectName: 'Weather App',
-			projectDescription:
-				'A weather app allowing you to check the weather conditions in large cities',
-			techArr: [
-				{ techImg: '/html.png', techName: 'HTML & CSS' },
-				{ techImg: '/typescript.png', techName: 'Typescript' },
-				{ techImg: '/atom.png', techName: 'React' },
-				{ techImg: '/google_api.png', techName: 'Google Maps API' }
-			]
-		}
-	];
-
-	const skillsArr = [
-		{
-			skillName: 'Javascript',
-			skillImg: '/js.png',
-			skillAlt: 'JS icon',
-			skillId: 1,
-			info: 'I learned JS during an intensive bootcamp at School of Code. Most of my projecs are currently written in this language',
-			projectsArr: [
-				{
-					projectName: 'Bootcam Adiutor',
-					projectUrl: 'https://github.com/MightyKielsa/bootcamp_helper_app_project'
-				},
-				{ projectName: 'Weather App', projectUrl: '#' },
-				{ projectName: 'turnUp', projectUrl: 'https://github.com/MightyKielsa/turnUp_front-end' }
-			]
-		},
-		{
-			skillName: 'Typescript',
-			skillImg: '/typescript.png',
-			skillAlt: 'Typescript icon',
-			skillId: 2,
-			info: 'I was introduced to Typesctipt by School of Code, one of my projects is written in this JS superset.',
-			projectsArr: [{ projectName: 'Weather App', projectUrl: '#' }]
-		},
-		{
-			skillName: 'HTML/CSS',
-			skillImg: '/html.png',
-			skillAlt: 'HTML and CSS icon',
-			skillId: 3,
-			info: 'I got introduced to the basics of HTML and CSS in secondary school. I decided re-learn it as part of my career change plan.',
-			projectsArr: [
-				{
-					projectName: 'Bootcam Adiutor',
-					projectUrl: 'https://github.com/MightyKielsa/bootcamp_helper_app_project'
-				},
-				{ projectName: 'Weather App', projectUrl: '#' },
-				{ projectName: 'turnUp', projectUrl: 'https://github.com/MightyKielsa/turnUp_front-end' },
-				{
-					projectName: 'This page!',
-					projectUrl: 'https://github.com/MightyKielsa/my_professional_page'
-				}
-			]
-		},
-		{
-			skillName: 'React',
-			skillImg: '/atom.png',
-			skillAlt: 'React icon',
-			skillId: 4,
-			info: 'School of Code provided me not only with fundamentals of JS, but also allowed me to explore React and concepts necessary for learning other frameworks.',
-			projectsArr: [
-				{
-					projectName: 'Bootcam Adiutor',
-					projectUrl: 'https://github.com/MightyKielsa/bootcamp_helper_app_project'
-				},
-				{ projectName: 'Weather App', projectUrl: '#' },
-				{ projectName: 'turnUp', projectUrl: 'https://github.com/MightyKielsa/turnUp_front-end' }
-			]
-		},
-		{
-			skillName: 'Svelte',
-			skillImg: '/svelte.png',
-			skillAlt: 'Svelte icon',
-			skillId: 5,
-			info: "I heard about Svelte from a person close to me, and I decided to explore it as part of my learning journey. I fell in love with it's simplicity and efficiency",
-			projectsArr: [
-				{
-					projectName: 'This page!',
-					projectUrl: 'https://github.com/MightyKielsa/my_professional_page'
-				}
-			]
-		},
-		{
-			skillName: 'Node.js',
-			skillImg: '/node-js.png',
-			skillAlt: 'Node icon',
-			skillId: 6,
-			info: 'Since front-end is only half the story, I learned node.js and the magic of the back end at School of Code. I used this framework in all of my full-stack projects',
-			projectsArr: [
-				{
-					projectName: 'Bootcam Adiutor',
-					projectUrl: 'https://github.com/MightyKielsa/bootcamp_helper_app_project'
-				},
-				{ projectName: 'turnUp', projectUrl: 'https://github.com/MightyKielsa/turnUp_front-end' }
-			]
-		},
-		{
-			skillName: 'SQL',
-			skillImg: '/sql-server.png',
-			skillAlt: 'SQL icon',
-			skillId: 7,
-			info: 'More specifically PostgreSQL! It was taugth to me as a tool for managing relational databases and me and my teams used it in most of our projects.',
-			projectsArr: [
-				{
-					projectName: 'Bootcam Adiutor',
-					projectUrl: 'https://github.com/MightyKielsa/bootcamp_helper_app_project'
-				},
-				{ projectName: 'turnUp', projectUrl: 'https://github.com/MightyKielsa/turnUp_front-end' }
-			]
-		},
-		{
-			skillName: 'AWS',
-			skillImg: '/amazon-aws.png',
-			skillAlt: 'AWS icon',
-			skillId: 8,
-			info: 'Me and my team used AWS Amplify and Cognito in our project TurnUp to handle deployment and authentication, despite a steep learning curve it is a great tool to work with.',
-			projectsArr: [
-				{ projectName: 'turnUp', projectUrl: 'https://github.com/MightyKielsa/turnUp_front-end' }
-			]
-		}
-	];
-	let hobbiesArr = [
-		{ hobbyName: 'Technology', img: 'https://cdn-icons-png.flaticon.com/512/901/901002.png' },
-		{ hobbyName: 'Boxing', img: 'https://cdn-icons-png.flaticon.com/512/2112/2112110.png' },
-		{ hobbyName: 'Reading', img: 'https://cdn-icons-png.flaticon.com/512/3389/3389081.png' },
-		{ hobbyName: 'Gaming', img: 'https://cdn-icons-png.flaticon.com/512/3097/3097980.png' },
-		{ hobbyName: 'Warhammer 40k', img: 'https://cdn-icons-png.flaticon.com/512/2917/2917780.png' },
-		{ hobbyName: 'Darts', img: 'https://cdn-icons-png.flaticon.com/512/3292/3292137.png' },
-		{ hobbyName: 'Ancient History', img: 'https://cdn-icons-png.flaticon.com/512/2234/2234770.png' }
-	];
-	let booksArr = [
-		{
-			bookName: 'Zero to One',
-			author: 'Peter Thiel',
-			img: 'https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1630663027i/18050143.jpg'
-		},
-		{
-			bookName: 'Thus Spoke Zarathustra',
-			author: 'Friedrich Nietzsche',
-			img: 'https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1650680683i/51893.jpg'
-		},
-		{
-			bookName: 'Elon Musk',
-			author: 'Ashlee Vance',
-			img: 'https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1518291452i/25541028.jpg'
-		},
-		{
-			bookName: 'The Republic',
-			author: 'Plato',
-			img: 'https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1386925655i/30289.jpg'
-		},
-		{
-			bookName: 'The Innovators',
-			author: 'Isaacson Walter',
-			img: 'https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1410191571i/21856367.jpg'
-		},
-		{
-			bookName: 'Creativity, Inc.',
-			author: 'Ed Catmull',
-			img: 'https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1400863577i/18077903.jpg'
-		}
-	];
 </script>
 
 <main>
@@ -293,6 +106,14 @@
 				</ul>
 			</div>
 		</section>
+		<footer class="footer-main-div">
+			<h2>Get in touch!</h2>
+			<div class="social-media-row">
+				{#each socialArr as social}
+					<SocialMedia socialObj={social} />
+				{/each}
+			</div>
+		</footer>
 	</div>
 </main>
 
@@ -321,10 +142,14 @@
 		padding: 0;
 		font-family: var(--font-fam);
 	}
+	main {
+		overflow-x: hidden;
+		width: 100%;
+	}
 	.main-body-element {
 		background-color: var(--background);
-		height: 392vh;
-		max-width: 100%;
+		height: 398vh;
+		width: 100%;
 		position: absolute;
 		top: 8vh;
 		left: 0;
@@ -332,7 +157,7 @@
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		overflow-y: hidden;
+		overflow-x: hidden;
 	}
 
 	h1 {
@@ -405,7 +230,7 @@
 	/*____________________________PROJECTS SECTION___________________________*/
 
 	.projects-section-main-div {
-		height: 94vh;
+		height: 92vh;
 		width: 100%;
 		background-color: var(--background);
 		text-align: center;
@@ -424,7 +249,7 @@
 	/*____________________________PERSONAL CORNER___________________________*/
 
 	.personal-corner-main-div {
-		height: 94vh;
+		height: 92vh;
 		background-color: var(--secondary-tint1);
 		width: 100%;
 	}
@@ -447,26 +272,22 @@
 
 	.personal-corner-content-div ul {
 		background-color: var(--background);
-		font-size: 18px;
+		font-size: 24px;
 		width: 300px;
 		height: 600px;
 		padding: 2rem;
 		border-radius: 2rem;
-		font-size: 130%;
 		list-style: none;
 		box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.5);
-		display: flex;
-		flex-direction: column;
-		justify-content: space-around;
 	}
 	.personal-corner-content-div li {
-		margin-top: 10px;
+		margin-top: 6px;
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
 		transition: all 0.5s;
 		border-radius: 1rem;
-		padding: 6px;
+		padding: 8px;
 	}
 
 	.personal-corner-content-div li:hover {
@@ -489,5 +310,17 @@
 	.hobby-img {
 		width: auto;
 		height: 60px;
+	}
+
+	/*____________________________GET IN TOUCH___________________________*/
+
+	.footer-main-div {
+		width: 100%;
+		height: 30vh;
+	}
+	.social-media-row {
+		display: flex;
+		width: 1000px;
+		justify-content: space-around;
 	}
 </style>

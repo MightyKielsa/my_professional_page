@@ -3,23 +3,29 @@
 	let techArr = ['/atom.png', '/js.png', '/node-js.png'];
 </script>
 
-<main class="main-project-card-div">
-	<img src={projectObj.projectImg} class="project-card-img" alt="application in a browser" />
-	<h3>{projectObj.projectName}</h3>
-	<div class="project-card-description">
-		<p>{projectObj.projectDescription}</p>
-	</div>
-	<div class="project-card-tech-row">
-		<p>Tech stack:</p>
-		<div class="tech-row-flex">
-			{#each projectObj.techArr as tech}
-				<img src={tech.techImg} class="project-card-tech-image" alt="tech logo" />
-			{/each}
+<a href={projectObj.projectUrl} target="_blank">
+	<main class="main-project-card-div">
+		<img src={projectObj.projectImg} class="project-card-img" alt="application in a browser" />
+		<h3>{projectObj.projectName}</h3>
+		<div class="project-card-description">
+			<p>{projectObj.projectDescription}</p>
 		</div>
-	</div>
-</main>
+		<div class="project-card-tech-row">
+			<p>Tech stack:</p>
+			<div class="tech-row-flex">
+				{#each projectObj.techArr as tech}
+					<img src={tech.techImg} class="project-card-tech-image" alt="tech logo" />
+				{/each}
+			</div>
+		</div>
+	</main></a
+>
 
 <style>
+	a {
+		text-decoration: none;
+	}
+
 	h3 {
 		margin-top: 6px;
 		margin-bottom: 0;
@@ -27,6 +33,7 @@
 	.main-project-card-div {
 		height: 520px;
 		width: 300px;
+		color: var(--primary-font-dark);
 		background-color: var(--background);
 		border-radius: 1rem;
 		box-shadow: 0px 10px 14px rgba(0, 0, 0, 0.5);
