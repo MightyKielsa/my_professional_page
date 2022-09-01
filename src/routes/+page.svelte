@@ -175,7 +175,7 @@
 
 	.top-horizontal-img {
 		width: 100%;
-		height: 30vh;
+		height: 40vh;
 		object-fit: cover;
 		background-position: center, center;
 	}
@@ -184,11 +184,11 @@
 		display: flex;
 		width: 74%;
 		text-align: center;
-		height: 62vh;
+		height: 52vh;
 	}
 
 	.about-me p {
-		margin-top: 40px;
+		margin-top: 30px;
 	}
 
 	/*____________________________SKILLS SECTION___________________________*/
@@ -376,8 +376,6 @@
 
 		.project-cards-row {
 			margin-top: 50px;
-			height: auto;
-
 			overflow-x: scroll;
 			gap: 40px;
 			height: 600px;
@@ -402,7 +400,7 @@
 		}
 	}
 
-	@media screen and (max-width: 1200px) and (max-height: 900px) {
+	@media screen and (max-width: 1280px) and (max-height: 900px) {
 		h1 {
 			font-size: 30px;
 		}
@@ -413,6 +411,19 @@
 		}
 		.about-me p {
 			margin-top: 20px;
+		}
+		.project-cards-row {
+			margin-top: 0;
+			overflow-x: scroll;
+			gap: 40px;
+			height: 500px;
+			align-items: center;
+		}
+		.personal-corner-main-div {
+			height: 112vh;
+		}
+		.personal-corner-main-div h2 {
+			margin-top: 1rem;
 		}
 	}
 
