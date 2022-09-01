@@ -58,7 +58,7 @@
 				<p>And so I learned...</p>
 			</div>
 		</section>
-		<section class="skills-section-main-div">
+		<section class="skills-section-main-div" id="skills-section">
 			<div class="skills-list-div">
 				<div id="skills-header-div">
 					<h2>TECH STACK</h2>
@@ -74,7 +74,7 @@
 			/>
 			<SkillCard />
 		</section>
-		<section class="projects-section-main-div">
+		<section class="projects-section-main-div" id="projects-section">
 			<h2>Projects:</h2>
 			<div class="project-cards-row">
 				{#each projectsArr as project}
@@ -82,7 +82,7 @@
 				{/each}
 			</div>
 		</section>
-		<section class="personal-corner-main-div">
+		<section class="personal-corner-main-div" id="personal-corner-section">
 			<h2>Personal corner</h2>
 			<div class="personal-corner-content-div">
 				<ul aria-label="Hobbies" class="main-page-list">
@@ -106,7 +106,7 @@
 				</ul>
 			</div>
 		</section>
-		<footer class="footer-main-div">
+		<footer class="footer-main-div" id="contact-section">
 			<h2>Get in touch!</h2>
 			<div class="social-media-row">
 				{#each socialArr as social}
@@ -158,6 +158,7 @@
 		flex-direction: column;
 		align-items: center;
 		overflow-x: hidden;
+		overflow-y: hidden;
 	}
 
 	h1 {
@@ -174,7 +175,7 @@
 
 	.top-horizontal-img {
 		width: 100%;
-		height: 45vh;
+		height: 30vh;
 		object-fit: cover;
 		background-position: center, center;
 	}
@@ -183,11 +184,11 @@
 		display: flex;
 		width: 74%;
 		text-align: center;
-		height: 47vh;
+		height: 62vh;
 	}
 
 	.about-me p {
-		margin-top: 20px;
+		margin-top: 40px;
 	}
 
 	/*____________________________SKILLS SECTION___________________________*/
@@ -241,9 +242,9 @@
 	}
 
 	.project-cards-row {
-		margin-top: 2rem;
+		margin-top: 70px;
 		display: flex;
-		justify-content: space-evenly;
+		justify-content: space-around;
 	}
 
 	/*____________________________PERSONAL CORNER___________________________*/
@@ -316,11 +317,192 @@
 
 	.footer-main-div {
 		width: 100%;
-		height: 30vh;
+		height: 27vh;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	.footer-main-div h2 {
+		margin-top: 1.5rem;
 	}
 	.social-media-row {
+		width: 50%;
 		display: flex;
-		width: 1000px;
-		justify-content: space-around;
+		justify-content: space-evenly;
+	}
+
+	/*____________________________MEDIA QUERIES___________________________*/
+	@media screen and (max-width: 1650px) {
+		.main-body-element {
+			height: auto;
+		}
+
+		/*____________________________ABOUT ME SECTION___________________________*/
+		.top-horizontal-img {
+			width: 100%;
+			object-fit: cover;
+			background-position: left, center;
+		}
+		.about-me {
+			margin-top: 30px;
+			height: 62vh;
+			width: 70%;
+		}
+		/*____________________________SKILLS SECTION___________________________*/
+		.skills-list-div {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: space-between;
+			padding-bottom: 40px;
+		}
+		#skills-header-div {
+			border-top-left-radius: 0;
+			border-top-right-radius: 0;
+			background-color: var(--primary-tint1);
+			color: var(--primary-font-light);
+			box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.5);
+			position: relative;
+			left: auto;
+			right: auto;
+			top: auto;
+			bottom: auto;
+			margin: 0;
+		}
+		/*____________________________PROJECTS___________________________*/
+		.projects-section-main-div {
+			height: 80vh;
+		}
+
+		.project-cards-row {
+			margin-top: 50px;
+			height: auto;
+
+			overflow-x: scroll;
+			gap: 40px;
+			height: 600px;
+			align-items: center;
+		}
+		/*____________________________PERSONAL CORNER___________________________*/
+		.personal-corner-content-div ul {
+			margin-top: 40px;
+		}
+		/*____________________________GET IN TOUCH___________________________*/
+		.social-media-row {
+			width: 80%;
+		}
+	}
+
+	@media screen and (max-width: 1400px) {
+		.main-body-element {
+			font-size: 20px;
+		}
+		h1 {
+			font-size: 40px;
+		}
+	}
+
+	@media screen and (max-width: 1200px) and (max-height: 900px) {
+		h1 {
+			font-size: 30px;
+		}
+		.about-me {
+			font-size: 20px;
+			width: 80%;
+			line-height: 1.7;
+		}
+		.about-me p {
+			margin-top: 20px;
+		}
+	}
+
+	@media screen and (max-width: 1070px) {
+		h1 {
+			font-size: 30px;
+		}
+		.about-me {
+			font-size: 20px;
+			width: 80%;
+			line-height: 1.8;
+		}
+
+		.about-me p {
+			margin-top: 10px;
+		}
+		.projects-section-main-div {
+			height: 92vh;
+		}
+		.project-cards-row {
+			margin-top: 0;
+			height: auto;
+			overflow-x: scroll;
+			gap: 40px;
+			height: 600px;
+			align-items: center;
+			justify-content: flex-start;
+		}
+	}
+
+	@media screen and (max-width: 1070px) and (max-height: 800px) {
+		h1 {
+			font-size: 30px;
+		}
+		.about-me {
+			font-size: 18px;
+			width: 80%;
+			line-height: 1.6;
+		}
+		.about-me p {
+			margin-top: 20px;
+		}
+	}
+
+	@media screen and (max-width: 1070px) and (max-height: 600px) {
+		h1 {
+			font-size: 28px;
+		}
+		.about-me {
+			font-size: 18px;
+			width: 80%;
+			line-height: 1.5;
+		}
+		.about-me p {
+			margin-top: 20px;
+		}
+		.project-cards-row {
+			margin-top: 0;
+			height: auto;
+			overflow-x: scroll;
+			gap: 40px;
+			height: 450px;
+			align-items: center;
+			justify-content: flex-start;
+		}
+		.projects-section-main-div h2 {
+			margin-top: 1rem;
+		}
+		.personal-corner-main-div {
+			height: 142vh;
+		}
+		.personal-corner-main-div h2 {
+			margin-top: 1rem;
+		}
+		.footer-main-div {
+			height: 50vh;
+		}
+	}
+	@media screen and (max-width: 800px) {
+		h1 {
+			font-size: 30px;
+		}
+		.about-me {
+			font-size: 18px;
+			width: 80%;
+			line-height: 1.9;
+		}
+		/*____________________________PERSONAL CORNER___________________________*/
+		.personal-corner-content-div ul {
+			padding: 25px;
+		}
 	}
 </style>

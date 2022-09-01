@@ -101,4 +101,37 @@
 		transform: scale(1.05);
 		cursor: pointer;
 	}
+
+	/*____________________________MEDIA QUERIES___________________________*/
+	@media screen and (max-width: 1650px) {
+		#skill-1,
+		#skill-2,
+		#skill-3,
+		#skill-4,
+		#skill-5,
+		#skill-6,
+		#skill-7,
+		#skill-8 {
+			position: relative;
+			top: auto;
+			bottom: auto;
+			left: auto;
+			right: auto;
+			margin: 0;
+		}
+		.main-skill-div {
+			width: 80%;
+			max-width: 500px;
+			height: 50px;
+			flex-direction: row;
+			justify-content: center;
+			gap: 20px;
+			font-size: 24px;
+		}
+
+		.skill-img {
+			height: 40px;
+			width: 40px;
+		}
+	}
 </style>

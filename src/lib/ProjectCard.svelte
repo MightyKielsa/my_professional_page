@@ -88,4 +88,21 @@
 		width: 100%;
 		height: 30px;
 	}
+
+	@media screen and (max-height: 800px) {
+		.main-project-card-div {
+			width: 500px;
+			height: 450px;
+		}
+	}
+
+	@media screen and (max-width: 1070px) and (max-height: 600px) {
+		.main-project-card-div {
+			width: 500px;
+			height: 400px;
+		}
+		.project-card-img {
+			height: 150px;
+		}
+	}
 </style>

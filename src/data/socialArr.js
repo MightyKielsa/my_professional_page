@@ -13,9 +13,15 @@ const socialArr = [
 	},
 	{
 		socialImg: '/mail.png',
-		socialUrl: 'patrykkielsa@gmail.com',
+		socialUrl: 'mailto:patrykkielsa@gmail.com',
 		socialUser: 'patrykkielsa@gmail.com',
 		socialName: 'Email'
+	},
+	{
+		socialImg: '/phone.png',
+		socialUrl: 'tel:07395827060',
+		socialUser: '07395827060',
+		socialName: 'Phone'
 	}
 ];
 
