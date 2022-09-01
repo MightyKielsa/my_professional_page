@@ -1,12 +1,22 @@
 const socialArr = [
 	{
-		socialImg: '/github',
+		socialImg: '/github.png',
 		socialUrl: 'https://github.com/MightyKielsa',
 		socialUser: 'MightyKielsa',
 		socialName: 'Github'
 	},
-	{ socialImg: '/linkedin', socialUrl: '#', socialUser: '#', socialName: 'Linkedin' },
-	{ socialImg: '#', socialUrl: '#', socialUser: '#', socialName: 'Phone' }
+	{
+		socialImg: '/linkedin.png',
+		socialUrl: 'https://www.linkedin.com/in/kielsa-p/',
+		socialUser: 'Patryk Kielsa',
+		socialName: 'Linkedin'
+	},
+	{
+		socialImg: '/mail.png',
+		socialUrl: 'patrykkielsa@gmail.com',
+		socialUser: 'patrykkielsa@gmail.com',
+		socialName: 'Email'
+	}
 ];
 
 export default socialArr;

@@ -106,9 +106,9 @@
 				</ul>
 			</div>
 		</section>
-		<footer>
-			<h2>Get in touch</h2>
-			<div>
+		<footer class="footer-main-div">
+			<h2>Get in touch!</h2>
+			<div class="social-media-row">
 				{#each socialArr as social}
 					<SocialMedia socialObj={social} />
 				{/each}
@@ -142,10 +142,14 @@
 		padding: 0;
 		font-family: var(--font-fam);
 	}
+	main {
+		overflow-x: hidden;
+		width: 100%;
+	}
 	.main-body-element {
 		background-color: var(--background);
-		height: 400vh;
-		max-width: 100%;
+		height: 398vh;
+		width: 100%;
 		position: absolute;
 		top: 8vh;
 		left: 0;
@@ -153,7 +157,7 @@
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		overflow-y: hidden;
+		overflow-x: hidden;
 	}
 
 	h1 {
@@ -226,7 +230,7 @@
 	/*____________________________PROJECTS SECTION___________________________*/
 
 	.projects-section-main-div {
-		height: 94vh;
+		height: 92vh;
 		width: 100%;
 		background-color: var(--background);
 		text-align: center;
@@ -245,7 +249,7 @@
 	/*____________________________PERSONAL CORNER___________________________*/
 
 	.personal-corner-main-div {
-		height: 94vh;
+		height: 92vh;
 		background-color: var(--secondary-tint1);
 		width: 100%;
 	}
@@ -306,5 +310,17 @@
 	.hobby-img {
 		width: auto;
 		height: 60px;
+	}
+
+	/*____________________________GET IN TOUCH___________________________*/
+
+	.footer-main-div {
+		width: 100%;
+		height: 30vh;
+	}
+	.social-media-row {
+		display: flex;
+		width: 1000px;
+		justify-content: space-around;
 	}
 </style>
