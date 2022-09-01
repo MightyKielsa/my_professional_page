@@ -89,4 +89,10 @@
 	.close-button:hover {
 		cursor: pointer;
 	}
+
+	@media screen and (max-width: 1650px) {
+		.skill-card-container {
+			height: auto;
+		}
+	}
 </style>
