@@ -10,7 +10,10 @@ const skillsArr = [
 				projectName: 'Bootcam Adiutor',
 				projectUrl: 'https://github.com/MightyKielsa/bootcamp_helper_app_project'
 			},
-			{ projectName: 'Weather App', projectUrl: '#' },
+			{
+				projectName: 'Weather App',
+				projectUrl: 'https://github.com/MightyKielsa/weather_app_pk_hm'
+			},
 			{ projectName: 'turnUp', projectUrl: 'https://github.com/MightyKielsa/turnUp_front-end' }
 		]
 	},
@@ -20,7 +23,12 @@ const skillsArr = [
 		skillAlt: 'Typescript icon',
 		skillId: 2,
 		info: 'I was introduced to Typesctipt by School of Code, one of my projects is written in this JS superset.',
-		projectsArr: [{ projectName: 'Weather App', projectUrl: '#' }]
+		projectsArr: [
+			{
+				projectName: 'Weather App',
+				projectUrl: 'https://github.com/MightyKielsa/weather_app_pk_hm'
+			}
+		]
 	},
 	{
 		skillName: 'HTML/CSS',
@@ -52,7 +60,10 @@ const skillsArr = [
 				projectName: 'Bootcam Adiutor',
 				projectUrl: 'https://github.com/MightyKielsa/bootcamp_helper_app_project'
 			},
-			{ projectName: 'Weather App', projectUrl: '#' },
+			{
+				projectName: 'Weather App',
+				projectUrl: 'https://github.com/MightyKielsa/weather_app_pk_hm'
+			},
 			{ projectName: 'turnUp', projectUrl: 'https://github.com/MightyKielsa/turnUp_front-end' }
 		]
 	},
