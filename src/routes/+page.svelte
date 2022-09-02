@@ -279,9 +279,10 @@
 	/*____________________________PERSONAL CORNER___________________________*/
 
 	.personal-corner-main-div {
-		height: 92vh;
+		height: auto;
 		background-color: var(--secondary-tint1);
 		width: 100%;
+		padding-bottom: 30px;
 	}
 	.personal-corner-main-div h2 {
 		margin-top: 2rem;
@@ -293,7 +294,7 @@
 	}
 	.personal-corner-content-div {
 		width: 100%;
-		height: 90%;
+		height: auto;
 		display: flex;
 		justify-content: space-around;
 	}
@@ -421,7 +422,14 @@
 			width: 80%;
 		}
 	}
-
+	@media screen and (max-width: 1650px) and (max-height: 800px) {
+		.project-cards-row {
+			height: 400px;
+			padding-top: 20px;
+			padding-bottom: 20px;
+			margin-top: 0;
+		}
+	}
 	@media screen and (max-width: 1400px) {
 		.main-body-element {
 			font-size: 20px;
@@ -572,13 +580,16 @@
 		.projects-section-main-div h2 {
 			margin-top: 2rem;
 		}
+
 		.project-cards-row {
 			margin-top: 50px;
 			overflow-x: scroll;
 			gap: 40px;
-			height: 700px;
 			align-items: center;
 			justify-content: flex-start;
+			height: auto;
+			padding-left: 20px;
+			padding-right: 20px;
 		}
 		.personal-corner-main-div {
 			height: 92vh;
@@ -647,7 +658,9 @@
 		}
 
 		.project-cards-row {
-			height: 400px;
+			height: auto;
+			padding-left: 20px;
+			padding-right: 20px;
 		}
 		.personal-corner-main-div {
 			height: 112vh;
@@ -728,6 +741,7 @@
 			font-size: 14px;
 		}
 	}
+
 	@media screen and (max-width: 420px) {
 		h1 {
 			margin-top: 0;
@@ -750,6 +764,13 @@
 		}
 		.hobby-img {
 			height: 40px;
+		}
+	}
+	@media screen and (max-width: 550px) {
+		.main-page-list {
+			width: auto;
+			margin-left: 10px;
+			margin-right: 10px;
 		}
 	}
 </style>

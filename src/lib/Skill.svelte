@@ -134,4 +134,16 @@
 			width: 40px;
 		}
 	}
+
+	@media screen (max-width: 1650) and (max-height: 900px) {
+		.main-skill-div {
+			width: min-content;
+			height: min-content;
+			padding: 10px;
+			flex-direction: row;
+			justify-content: center;
+			gap: 20px;
+			font-size: 24px;
+		}
+	}
 </style>
