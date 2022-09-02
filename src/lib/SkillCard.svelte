@@ -95,4 +95,11 @@
 			height: auto;
 		}
 	}
+
+	@media screen and (max-width: 550px) and (max-height: 800px) {
+		#skill-card-main {
+			height: 92vh;
+			width: 100%;
+		}
+	}
 </style>
