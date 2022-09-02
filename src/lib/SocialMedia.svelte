@@ -21,4 +21,31 @@
 		align-items: center;
 		margin-top: 2vh;
 	}
+
+	@media screen and (max-width: 550px) and (max-height: 800px) {
+		img {
+			height: 32px;
+		}
+		.social-media-card {
+			width: 140px;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			margin-top: 2vh;
+			font-size: 14px;
+		}
+	}
+	@media screen and (max-width: 450px) and (max-height: 920px) {
+		img {
+			height: 24px;
+		}
+		.social-media-card {
+			width: 25vw;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			margin-top: 2vh;
+			font-size: 11px;
+		}
+	}
 </style>

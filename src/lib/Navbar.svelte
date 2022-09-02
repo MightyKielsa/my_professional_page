@@ -53,4 +53,10 @@
 		height: 5vh;
 		margin: 5px;
 	}
+
+	@media screen and (max-width: 950px) and (max-height: 1400px) {
+		.navbar-btn-row {
+			width: 400px;
+		}
+	}
 </style>
