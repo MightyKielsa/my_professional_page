@@ -57,14 +57,14 @@
 			<div class="about-me-div">
 				<h1>Hi I'm Patryk Kielsa, nice to meet you!</h1>
 				<p>
-					<b>"How did you end up as a software engineer?"</b> - you're most likely not asking, but I'll
-					answer it anyway. I started my adventure with programming when I was still in secondary school
+					<b>"How did you end up as a software engineer?"</b> - you're probably not asking, but I'll
+					answer anyway. I started my adventure with programming when I was still in the secondary school
 					back in Poland, however the spark that lighted my interest in technology came somewhat later.
-					I was im my second year of Business and Events Management at the University of the West of
-					England, when I realised it wasn't for me.
+					I was in my second year of Business and Events Management at the University of the West of
+					England when I realised it wasn't for me.
 				</p>
 				<p>
-					So I started leaning <b>Python and the basics of electronic circuits</b> in my free time.
+					I started leaning <b>Python and the basics of electronic circuits</b> in my free time.
 					Unfortunately, by the end of my third year things got manic and I had to put my new hobby
 					on the back burner. I received my degree and worked as a <b>trade show manager</b> for 2
 					years. While I learned many invaluable lessons during that time, I still felt unfulfilled.
@@ -260,6 +260,7 @@
 	/*____________________________PROJECTS SECTION___________________________*/
 
 	.projects-section-main-div {
+		min-height: auto;
 		height: 92vh;
 		width: 100%;
 		background-color: var(--background);
@@ -403,7 +404,8 @@
 		}
 		/*____________________________PROJECTS___________________________*/
 		.projects-section-main-div {
-			height: 80vh;
+			min-height: 80vh;
+			height: auto;
 		}
 
 		.project-cards-row {
@@ -422,12 +424,16 @@
 			width: 80%;
 		}
 	}
-	@media screen and (max-width: 1650px) and (max-height: 800px) {
+	@media screen and (max-width: 1650px) and (max-height: 900px) {
 		.project-cards-row {
 			height: 400px;
 			padding-top: 20px;
 			padding-bottom: 20px;
 			margin-top: 0;
+		}
+		.about-me {
+			width: 90%;
+			font-size: 18px;
 		}
 	}
 	@media screen and (max-width: 1400px) {

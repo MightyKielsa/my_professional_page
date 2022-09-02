@@ -135,11 +135,12 @@
 		}
 	}
 
-	@media screen (max-width: 1650) and (max-height: 900px) {
+	@media screen and (max-width: 1650px) and (max-height: 900px) {
 		.main-skill-div {
 			width: min-content;
 			height: min-content;
-			padding: 10px;
+			padding: 5px;
+			width: 80%;
 			flex-direction: row;
 			justify-content: center;
 			gap: 20px;
