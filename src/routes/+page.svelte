@@ -213,6 +213,7 @@
 		width: 74%;
 		text-align: center;
 		height: 52vh;
+		padding-bottom: 10px;
 	}
 
 	.about-me p {
