@@ -39,7 +39,7 @@ const projectsArr = [
 			{ techImg: '/atom.png', techName: 'React' },
 			{ techImg: '/google_api.png', techName: 'Google Maps API' }
 		],
-		projectUrl: '#'
+		projectUrl: 'https://github.com/MightyKielsa/weather_app_pk_hm'
 	}
 ];
 
