@@ -170,6 +170,7 @@
 	.main-body-element {
 		background-color: var(--background);
 		height: auto;
+		min-height: 392vh;
 		width: 100%;
 		position: absolute;
 		top: 8vh;
@@ -212,7 +213,8 @@
 		display: flex;
 		width: 74%;
 		text-align: center;
-		height: 52vh;
+		min-height: 52vh;
+		height: auto;
 		padding-bottom: 10px;
 	}
 
@@ -284,6 +286,7 @@
 		background-color: var(--secondary-tint1);
 		width: 100%;
 		padding-bottom: 30px;
+		overflow-x: auto;
 	}
 	.personal-corner-main-div h2 {
 		margin-top: 2rem;
