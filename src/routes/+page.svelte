@@ -58,21 +58,20 @@
 				<h1>Hi I'm Patryk Kielsa, nice to meet you!</h1>
 				<p>
 					<b>"How did you end up as a software engineer?"</b> - you're probably not asking, but I'll
-					answer anyway. I started my adventure with programming when I was still in the secondary school
-					back in Poland, however the spark that lighted my interest in technology came somewhat later.
-					I was in my second year of Business and Events Management at the University of the West of
-					England when I realised it wasn't for me.
+					answer anyway. I started my adventure with programming when I was still in the secondary
+					school back in Poland, however the spark that lighted my interest in technology came
+					somewhat later. Disilusioned with my Business and Events degree I started learning
+					<b>Python and the basics of electronic circuits</b> while I was still studying at UWE.
 				</p>
 				<p>
-					I started leaning <b>Python and the basics of electronic circuits</b> in my free time.
 					Unfortunately, by the end of my third year things got manic and I had to put my new hobby
-					on the back burner. I received my degree and worked as a <b>trade show manager</b> for 2
-					years. While I learned many invaluable lessons during that time, I still felt unfulfilled.
-					The pandemic helped me with the decision to quit by taking it out of my hand. So I picked
-					up a temporary job as a delivery driver and not-so-soon after I made a decision
-					<b>to change my career path and attend an intensive bootcamp</b> at School of Code.
+					on the back burner. I finished uni and went on to work as a <b>trade show manager</b>. The
+					pandemic wrecked the events industry so I became a delivery driver and not-so-soon after
+					that I decided to commit to my passion and attend an
+					<b>intensive fullstack programming bootcamp</b>. But my journey didn't stop there, I'm
+					currently learning <b>C++</b> and looking for a company that will allow me to hone my problem
+					solving skills while allowing me to explore my passion for technology.
 				</p>
-				<p>And so I learned...</p>
 			</div>
 		</section>
 		<section class="skills-section-main-div" id="skills-section">
