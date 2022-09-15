@@ -415,7 +415,9 @@
 			overflow-x: scroll;
 			gap: 40px;
 			height: 600px;
-			align-items: center;
+			align-items: flex-start;
+			padding-left: 20px;
+			padding-right: 20px;
 		}
 		/*____________________________PERSONAL CORNER___________________________*/
 		.personal-corner-content-div ul {
