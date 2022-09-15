@@ -415,7 +415,8 @@
 			overflow-x: scroll;
 			gap: 40px;
 			height: 600px;
-			align-items: flex-start;
+			align-items: center;
+			justify-content: flex-start;
 			padding-left: 20px;
 			padding-right: 20px;
 		}
@@ -468,6 +469,9 @@
 			gap: 40px;
 			height: 500px;
 			align-items: center;
+			justify-content: flex-start;
+			padding-left: 20px;
+			padding-right: 20px;
 		}
 		.personal-corner-main-div {
 			height: 112vh;
