@@ -27,7 +27,7 @@
 		<a href="#projects-section">Projects</a>
 		<a href="#personal-corner-section">Hobbies</a>
 		<a href="#contact-section">Contact</a>
-		<a download="kielsa-cv.pdf" href="/kielsa-cv.pdf">CV</a>
+		<a download="kielsa_cv.pdf" href="/kielsa-cv.pdf">CV</a>
 	</div>
 </nav>
 
