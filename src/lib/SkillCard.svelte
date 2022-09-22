@@ -32,6 +32,9 @@
 		margin-top: 0;
 	}
 
+	li {
+		margin-left: -30px;
+	}
 	p {
 		width: 90%;
 		margin-top: 0;

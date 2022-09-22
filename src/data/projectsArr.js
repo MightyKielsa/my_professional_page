@@ -40,6 +40,19 @@ const projectsArr = [
 			{ techImg: '/google_api.png', techName: 'Google Maps API' }
 		],
 		projectUrl: 'https://github.com/MightyKielsa/weather_app_pk_hm'
+	},
+	{
+		projectImg: '/galaspier.png',
+		projectName: 'Chat-summary private project',
+		projectDescription: 'Private project with friends for our group-chat anniversary event',
+		techArr: [
+			{ techImg: '/html.png', techName: 'HTML & CSS' },
+			{ techImg: '/js.png', techName: 'Javascript' },
+			{ techImg: '/atom.png', techName: 'React' },
+			{ techImg: '/python.png', techName: 'Node.js' },
+			{ techImg: '/django.png', techName: 'Django' }
+		],
+		projectUrl: 'https://github.com/MightyKielsa/gala_frontend'
 	}
 ];
 

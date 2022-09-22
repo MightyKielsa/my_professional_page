@@ -14,7 +14,12 @@
 			<p>Tech stack:</p>
 			<div class="tech-row-flex">
 				{#each projectObj.techArr as tech}
-					<img src={tech.techImg} class="project-card-tech-image" alt="tech logo" />
+					<img
+						src={tech.techImg}
+						class="project-card-tech-image"
+						alt="tech logo"
+						title={tech.techName}
+					/>
 				{/each}
 			</div>
 		</div>

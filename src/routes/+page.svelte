@@ -431,7 +431,7 @@
 	}
 	@media screen and (max-width: 1650px) and (max-height: 900px) {
 		.project-cards-row {
-			height: 400px;
+			height: auto;
 			padding-top: 20px;
 			padding-bottom: 20px;
 			margin-top: 0;
@@ -467,7 +467,7 @@
 			margin-top: 0;
 			overflow-x: scroll;
 			gap: 40px;
-			height: 500px;
+			height: auto;
 			align-items: center;
 			justify-content: flex-start;
 			padding-left: 20px;
