@@ -59,7 +59,7 @@
 				<p>
 					<b>"How did you end up as a software engineer?"</b> - you're probably not asking, but I'll
 					answer anyway. I started my adventure with programming when I was still in the secondary
-					school back in Poland, however the spark that lighted my interest in technology came
+					school back in Poland, however the spark that ignited my interest in technology came
 					somewhat later. Disilusioned with my Business and Events degree I started learning
 					<b>Python and the basics of electronic circuits</b> while I was still studying at UWE.
 				</p>
