@@ -26,7 +26,7 @@ const projectsArr = [
 			{ techImg: '/node-js.png', techName: 'Node.js' },
 			{ techImg: '/sql-server.png', techName: 'SQL' }
 		],
-		projectUrl: 'https://github.com/MightyKielsa/bootcamp_helper_app_project'
+		projectUrl: 'https://github.com/MightyKielsa/bootcamp_adiutor_front_end'
 	},
 	{
 		projectImg: '/weather_app.PNG',

@@ -8,7 +8,7 @@ const skillsArr = [
 		projectsArr: [
 			{
 				projectName: 'Bootcam Adiutor',
-				projectUrl: 'https://github.com/MightyKielsa/bootcamp_helper_app_project'
+				projectUrl: 'https://github.com/MightyKielsa/bootcamp_adiutor_front_end'
 			},
 			{
 				projectName: 'Weather App',
