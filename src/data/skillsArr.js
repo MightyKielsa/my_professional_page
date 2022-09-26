@@ -35,7 +35,7 @@ const skillsArr = [
 		skillImg: '/html.png',
 		skillAlt: 'HTML and CSS icon',
 		skillId: 3,
-		info: 'I got introduced to the basics of HTML and CSS in secondary school. I decided re-learn it as part of my career change plan.',
+		info: 'I got introduced to the basics of HTML and CSS in the secondary school. I decided to re-learn it as a part of my career change plan.',
 		projectsArr: [
 			{
 				projectName: 'Bootcam Adiutor',
