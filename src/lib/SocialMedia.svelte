@@ -2,7 +2,7 @@
 	export let socialObj;
 </script>
 
-<a href={socialObj.socialUrl}>
+<a href={socialObj.socialUrl} target="_blank">
 	<main class="social-media-card">
 		<img src={socialObj.socialImg} alt="social media icon" />
 		<p><strong>{socialObj.socialUser}</strong></p>
