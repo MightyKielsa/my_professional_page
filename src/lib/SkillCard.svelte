@@ -34,11 +34,23 @@
 
 	li {
 		margin-left: -30px;
+		text-align: center;
 	}
+
 	p {
 		width: 90%;
 		margin-top: 0;
 		margin-bottom: 10px;
+	}
+
+	li a:link {
+		color: var(--primary-font-dark);
+		font-style: none;
+	}
+
+	li a:visited {
+		color: var(--primary-font-dark);
+		font-style: none;
 	}
 
 	#skill-card-main {
