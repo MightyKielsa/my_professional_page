@@ -53,6 +53,18 @@ const projectsArr = [
 			{ techImg: '/django.png', techName: 'Django' }
 		],
 		projectUrl: 'https://github.com/MightyKielsa/gala_frontend'
+	},
+	{
+		projectImg: '/portfolio_1.png',
+		projectName: 'This very website!',
+		projectDescription: 'A portfolio page demonstrating my projects as well as the tech stack.',
+		techArr: [
+			{ techImg: '/svelte.png', techName: 'Svelte' },
+			{ techImg: '/js.png', techName: 'Javascript' },
+			{ techImg: '/python.png', techName: 'Node.js' },
+			{ techImg: '/html.png', techName: 'HTML/CSS' }
+		],
+		projectUrl: 'https://github.com/MightyKielsa/my_professional_page'
 	}
 ];
 
