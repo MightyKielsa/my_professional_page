@@ -43,14 +43,15 @@ const projectsArr = [
 	},
 	{
 		projectImg: '/galaspier.png',
-		projectName: 'Chat-summary private project',
+		projectName: 'Groupchat Stats Website',
 		projectDescription: 'Private project with friends for our group-chat anniversary event',
 		techArr: [
 			{ techImg: '/html.png', techName: 'HTML & CSS' },
 			{ techImg: '/js.png', techName: 'Javascript' },
 			{ techImg: '/atom.png', techName: 'React' },
 			{ techImg: '/python.png', techName: 'Node.js' },
-			{ techImg: '/django.png', techName: 'Django' }
+			{ techImg: '/django.png', techName: 'Django' },
+			{ techImg: '/docker.png', techName: 'Docker' }
 		],
 		projectUrl: 'https://github.com/MightyKielsa/gala_frontend'
 	},

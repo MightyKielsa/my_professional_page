@@ -117,6 +117,49 @@ const skillsArr = [
 		projectsArr: [
 			{ projectName: 'turnUp', projectUrl: 'https://github.com/MightyKielsa/turnUp_front-end' }
 		]
+	},
+	{
+		skillName: 'Docker',
+		skillImg: '/docker.png',
+		skillAlt: 'Docker icon',
+		skillId: 9,
+		info: 'I learned how to set up and use docker for a personal project that my friend offered me to join (repo below).',
+		projectsArr: [
+			{
+				projectName: 'Groupchat Stats Website',
+				projectUrl: 'https://github.com/MightyKielsa/gala_frontend'
+			}
+		]
+	},
+	{
+		skillName: 'Jest/Cypress',
+		skillImg: '/testing.png',
+		skillAlt: 'testing icon',
+		skillId: 9,
+		info: 'I was introduced to the idea of Test Driven Development during my time at SoC bootcamp. They also made me familiar with libraries like Jest and Cypress which I later used in several projects.',
+		projectsArr: [
+			{
+				projectName: 'turnUp',
+				projectUrl: 'https://github.com/MightyKielsa/turnUp_front-end'
+			},
+			{
+				projectName: 'Bootcamp Adiutor',
+				projectUrl: 'https://github.com/MightyKielsa/bootcamp_adiutor_front_end'
+			}
+		]
+	},
+	{
+		skillName: 'C++',
+		skillImg: '/cpp.png',
+		skillAlt: 'C plus plus icon',
+		skillId: 9,
+		info: "As a way of deepening my knowledge of programming I decided to learn a lower level, compiled and statically typed language. I chose C++ beacause of its versitality and I'm not dissapointed.",
+		projectsArr: [
+			{
+				projectName: 'No projects as of yet',
+				projectUrl: '#'
+			}
+		]
 	}
 ];
 
