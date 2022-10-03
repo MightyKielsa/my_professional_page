@@ -96,6 +96,34 @@
 		bottom: 80px;
 		margin: 0 auto;
 	}
+	#skill-9 {
+		position: absolute;
+		left: 0;
+		right: 700px;
+		top: 50px;
+		margin: 0 auto;
+	}
+	#skill-10 {
+		position: absolute;
+		left: 700px;
+		right: 0;
+		top: 50px;
+		margin: 0 auto;
+	}
+	#skill-11 {
+		position: absolute;
+		left: 700px;
+		right: 0;
+		bottom: 50px;
+		margin: 0 auto;
+	}
+	#skill-12 {
+		position: absolute;
+		left: 0;
+		right: 700px;
+		bottom: 50px;
+		margin: 0 auto;
+	}
 
 	.main-skill-div:hover {
 		transform: scale(1.05);
@@ -111,7 +139,11 @@
 		#skill-5,
 		#skill-6,
 		#skill-7,
-		#skill-8 {
+		#skill-8,
+		#skill-9,
+		#skill-10,
+		#skill-11,
+		#skill-12 {
 			position: relative;
 			top: auto;
 			bottom: auto;

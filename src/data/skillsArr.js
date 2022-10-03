@@ -135,7 +135,7 @@ const skillsArr = [
 		skillName: 'Jest/Cypress',
 		skillImg: '/testing.png',
 		skillAlt: 'testing icon',
-		skillId: 9,
+		skillId: 10,
 		info: 'I was introduced to the idea of Test Driven Development during my time at SoC bootcamp. They also made me familiar with libraries like Jest and Cypress which I later used in several projects.',
 		projectsArr: [
 			{
@@ -152,12 +152,29 @@ const skillsArr = [
 		skillName: 'C++',
 		skillImg: '/cpp.png',
 		skillAlt: 'C plus plus icon',
-		skillId: 9,
+		skillId: 11,
 		info: "As a way of deepening my knowledge of programming I decided to learn a lower level, compiled and statically typed language. I chose C++ beacause of its versitality and I'm not dissapointed.",
 		projectsArr: [
 			{
 				projectName: 'No projects as of yet',
 				projectUrl: '#'
+			}
+		]
+	},
+	{
+		skillName: 'Express',
+		skillImg: '/express.png',
+		skillAlt: 'Express.js icon',
+		skillId: 12,
+		info: 'The fullstack web developer bootcamp I completed introduced me to the express.js framework and the concept of REST API which I later used in multiple projects.',
+		projectsArr: [
+			{
+				projectName: 'turnUp',
+				projectUrl: 'https://github.com/MightyKielsa/turnUp_front-end'
+			},
+			{
+				projectName: 'Bootcamp Adiutor',
+				projectUrl: 'https://github.com/MightyKielsa/bootcamp_adiutor_front_end'
 			}
 		]
 	}
