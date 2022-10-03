@@ -54,7 +54,9 @@
 	}
 
 	#skill-card-main {
-		height: 92vh;
+		min-height: 92vh;
+		max-height: 100vh;
+		height: auto;
 		width: 45%;
 		background-color: rgba(0, 0, 0, 0.5);
 		position: absolute;
@@ -111,10 +113,14 @@
 		}
 	}
 
-	@media screen and (max-width: 550px) and (max-height: 800px) {
+	@media screen and (max-width: 550px) and (max-height: 920px) {
 		#skill-card-main {
-			height: 92vh;
+			height: 100%;
+			max-height: 100vh;
 			width: 100%;
+		}
+		.skill-card-container {
+			width: 95%;
 		}
 	}
 </style>

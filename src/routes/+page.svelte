@@ -42,6 +42,7 @@
 
 <main>
 	<Navbar />
+	<a id="about-anchor" />
 	<div class="main-body-element">
 		<img
 			class="top-horizontal-img"
@@ -75,6 +76,7 @@
 			</div>
 		</section>
 		<section class="skills-section-main-div" id="skills-section">
+			<a id="skills-anchor" class="anchors" />
 			<div class="skills-list-div">
 				<div id="skills-header-div">
 					<h2>TECH STACK</h2>
@@ -91,6 +93,7 @@
 			<SkillCard />
 		</section>
 		<section class="projects-section-main-div" id="projects-section">
+			<a id="projects-anchor" class="anchors" />
 			<h2>Projects:</h2>
 			<div class="project-cards-row">
 				{#each projectsArr as project}
@@ -99,6 +102,7 @@
 			</div>
 		</section>
 		<section class="personal-corner-main-div" id="personal-corner-section">
+			<a id="personal-corner-anchor" class="anchors" />
 			<h2>Personal corner</h2>
 			<div class="personal-button-mobile-div">
 				<button on:click={onHobbyClick}>Hobbies</button><button on:click={onBookClick}>Books</button
@@ -165,7 +169,13 @@
 	main {
 		overflow-x: hidden;
 		width: 100%;
+		scroll-behavior: smooth;
 	}
+
+	.anchors {
+		margin-top: -8vh;
+	}
+
 	.main-body-element {
 		background-color: var(--background);
 		height: auto;
@@ -261,7 +271,6 @@
 	/*____________________________PROJECTS SECTION___________________________*/
 
 	.projects-section-main-div {
-		min-height: auto;
 		height: 92vh;
 		width: 100%;
 		background-color: var(--background);
@@ -406,8 +415,8 @@
 		}
 		/*____________________________PROJECTS___________________________*/
 		.projects-section-main-div {
-			min-height: 80vh;
-			height: auto;
+			min-height: 92vh;
+			max-height: 100vh;
 		}
 
 		.project-cards-row {
@@ -564,6 +573,9 @@
 		.footer-main-div {
 			height: 50vh;
 		}
+		#skills-header-div {
+			height: 80px;
+		}
 	}
 	@media screen and (max-width: 950px) and (max-height: 1400px) {
 		.about-me {
@@ -577,7 +589,7 @@
 			margin-top: 50px;
 			overflow-x: scroll;
 			gap: 40px;
-			height: 900px;
+			height: 600px;
 			align-items: center;
 			justify-content: flex-start;
 		}
@@ -585,7 +597,7 @@
 			height: 67vh;
 		}
 	}
-	@media screen and (max-width: 850px) and (max-height: 1200px) {
+	@media screen and (max-width: 850px) and (max-height: 1280px) {
 		.about-me {
 			margin-top: 0;
 			height: 52vh;
@@ -629,6 +641,8 @@
 
 		#skills-header-div {
 			min-width: 200px;
+			height: 70px;
+			margin-bottom: 10px;
 		}
 		/*____________________________PERSONAL CORNER___________________________*/
 		.personal-corner-content-div ul {
@@ -692,7 +706,7 @@
 		}
 	}
 
-	@media screen and (max-width: 450px) and (max-height: 920px) {
+	@media screen and (max-width: 500px) and (max-height: 950px) {
 		h1 {
 			font-size: 26px;
 		}
@@ -717,6 +731,12 @@
 		}
 		.skills-list-div {
 			width: 100%;
+		}
+
+		.skills-section-main-div {
+			height: auto;
+			min-height: 92vh;
+			max-height: 100vh;
 		}
 		.main-vertical-img {
 			display: none;

@@ -9,6 +9,56 @@
 			btnRow.style.right = '-500px';
 		}
 	}
+
+	function onAboutClick() {
+		var aboutAnch = document.getElementById('about-anchor');
+
+		aboutAnch.scrollIntoView({
+			behavior: 'smooth',
+			block: 'start',
+			inline: 'nearest'
+		});
+	}
+
+	function onSkillsClick() {
+		var aboutAnch = document.getElementById('skills-anchor');
+
+		aboutAnch.scrollIntoView({
+			behavior: 'smooth',
+			block: 'start',
+			inline: 'nearest'
+		});
+	}
+
+	function onProjectsClick() {
+		var aboutAnch = document.getElementById('projects-anchor');
+
+		aboutAnch.scrollIntoView({
+			behavior: 'smooth',
+			block: 'start',
+			inline: 'nearest'
+		});
+	}
+
+	function onPersonalClick() {
+		var aboutAnch = document.getElementById('personal-corner-anchor');
+
+		aboutAnch.scrollIntoView({
+			behavior: 'smooth',
+			block: 'start',
+			inline: 'nearest'
+		});
+	}
+
+	function onContactClick() {
+		var aboutAnch = document.getElementById('contact-section');
+
+		aboutAnch.scrollIntoView({
+			behavior: 'smooth',
+			block: 'start',
+			inline: 'nearest'
+		});
+	}
 </script>
 
 <nav class="nav-bar">
@@ -16,18 +66,20 @@
 		><img src="/download-doc.png" alt="download icon" /> CV</a
 	>
 	<div class="navbar-btn-row">
-		<a href="#skills-section">Skills</a>
-		<a href="#projects-section">Projects</a>
-		<a href="#personal-corner-section">Hobbies</a>
-		<a href="#contact-section">Contact</a>
+		<a on:click={onAboutClick}>About</a>
+		<a on:click={onSkillsClick}>Skills</a>
+		<a on:click={onProjectsClick}>Projects</a>
+		<a on:click={onPersonalClick}>Hobbies</a>
+		<a on:click={onContactClick}>Contact</a>
 	</div>
 	<img src="/menu-button.png" class="navbar-menu-button" alt="menu button" on:click={onMenuClick} />
 	<div class="navbar-btn-row-mobile" id="navbar-btn-row-mobile">
-		<a href="#skills-section">Skills</a>
-		<a href="#projects-section">Projects</a>
-		<a href="#personal-corner-section">Hobbies</a>
-		<a href="#contact-section">Contact</a>
-		<a download="kielsa_cv.pdf" href="/kielsa-cv.pdf">CV</a>
+		<a on:click={onAboutClick}>About</a>
+		<a on:click={onSkillsClick}>Skills</a>
+		<a on:click={onProjectsClick}>Projects</a>
+		<a on:click={onPersonalClick}>Hobbies</a>
+		<a on:click={onContactClick}>Contact</a>
+		<a download="kielsa_cv.pdf" href="/kielsa_cv.pdf">CV</a>
 	</div>
 </nav>
 
@@ -59,6 +111,7 @@
 	.navbar-btn-row a {
 		color: var(--primary-font-light);
 		text-decoration: none;
+		cursor: pointer;
 	}
 	.navbar-btn-row-mobile {
 		display: none;
@@ -93,7 +146,7 @@
 
 	@media screen and (max-width: 950px) and (max-height: 1400px) {
 		.navbar-btn-row {
-			width: 400px;
+			width: 500px;
 		}
 	}
 	@media screen and (max-width: 500px) {
