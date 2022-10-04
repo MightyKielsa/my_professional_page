@@ -63,7 +63,7 @@
 
 <nav class="nav-bar">
 	<a class="cv-download-btn" download="kielsa_cv.pdf" href="/kielsa_cv.pdf"
-		><img src="/download-doc.png" alt="download icon" /> CV</a
+		><img src="/download-doc.png" alt="cv download icon" /> CV</a
 	>
 	<div class="navbar-btn-row">
 		<a on:click={onAboutClick}>About</a>
