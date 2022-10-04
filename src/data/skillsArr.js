@@ -4,10 +4,10 @@ const skillsArr = [
 		skillImg: '/js.png',
 		skillAlt: 'JS icon',
 		skillId: 1,
-		info: 'I learned JS during an intensive bootcamp at School of Code. Most of my projecs are currently written in this language',
+		info: 'I learned JS during the intensive web development bootcamp at School of Code. Most of my projects are currently written in this language',
 		projectsArr: [
 			{
-				projectName: 'Bootcam Adiutor',
+				projectName: 'Bootcamp Adiutor',
 				projectUrl: 'https://github.com/MightyKielsa/bootcamp_adiutor_front_end'
 			},
 			{
@@ -22,7 +22,7 @@ const skillsArr = [
 		skillImg: '/typescript.png',
 		skillAlt: 'Typescript icon',
 		skillId: 2,
-		info: 'I was introduced to Typesctipt by School of Code, one of my projects is written in this JS superset.',
+		info: 'I was introduced to Typescript by School of Code, one of my projects is written in this JS superset.',
 		projectsArr: [
 			{
 				projectName: 'Weather App',
@@ -38,7 +38,7 @@ const skillsArr = [
 		info: 'I got introduced to the basics of HTML and CSS in the secondary school. I decided to re-learn it as a part of my career change plan.',
 		projectsArr: [
 			{
-				projectName: 'Bootcam Adiutor',
+				projectName: 'Bootcamp Adiutor',
 				projectUrl: 'https://github.com/MightyKielsa/bootcamp_helper_app_project'
 			},
 			{ projectName: 'Weather App', projectUrl: '#' },
@@ -153,7 +153,7 @@ const skillsArr = [
 		skillImg: '/cpp.png',
 		skillAlt: 'C plus plus icon',
 		skillId: 11,
-		info: "As a way of deepening my knowledge of programming I decided to learn a lower level, compiled and statically typed language. I chose C++ beacause of its versitality and I'm not dissapointed.",
+		info: "As a way of deepening my knowledge of programming I decided to learn a lower level, compiled and statically typed language. I chose C++ because of its versitality and I'm not dissapointed.",
 		projectsArr: [
 			{
 				projectName: 'No projects as of yet',
@@ -166,7 +166,7 @@ const skillsArr = [
 		skillImg: '/express.png',
 		skillAlt: 'Express.js icon',
 		skillId: 12,
-		info: 'The fullstack web developer bootcamp I completed introduced me to the express.js framework and the concept of REST API which I later used in multiple projects.',
+		info: 'The fullstack web development bootcamp I completed introduced me to the express.js framework and the concept of REST API which I later used in multiple projects.',
 		projectsArr: [
 			{
 				projectName: 'turnUp',
