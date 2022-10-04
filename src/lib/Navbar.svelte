@@ -62,7 +62,7 @@
 </script>
 
 <nav class="nav-bar">
-	<a class="cv-download-btn" download="kielsa-cv.pdf" href="/kielsa-cv.pdf"
+	<a class="cv-download-btn" download="kielsa_cv.pdf" href="/kielsa_cv.pdf"
 		><img src="/download-doc.png" alt="download icon" /> CV</a
 	>
 	<div class="navbar-btn-row">
