@@ -113,10 +113,16 @@
 		}
 	}
 
+	@media screen and (max-width: 850px) {
+		#skill-card-main {
+			width: 100vw;
+		}
+	}
+
 	@media screen and (max-width: 550px) and (max-height: 920px) {
 		#skill-card-main {
 			height: 100%;
-			max-height: 100vh;
+			max-height: 92vh;
 			width: 100%;
 		}
 		.skill-card-container {

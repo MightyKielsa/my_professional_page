@@ -389,29 +389,37 @@
 		}
 		.about-me {
 			margin-top: 30px;
-			height: 62vh;
+			height: fit-content;
+			min-height: 52vh;
 			width: 70%;
 		}
 		/*____________________________SKILLS SECTION___________________________*/
 		.skills-list-div {
-			display: flex;
+			/* display: flex;
 			flex-direction: column;
 			align-items: center;
-			justify-content: space-between;
-			padding-bottom: 40px;
+			justify-content: space-between; */
+			display: grid;
+			grid-template-columns: 50% 50%;
+			padding-top: 140px;
+			margin-left: auto;
+			margin-right: auto;
 		}
+
 		#skills-header-div {
 			border-top-left-radius: 0;
 			border-top-right-radius: 0;
 			background-color: var(--primary-tint1);
 			color: var(--primary-font-light);
 			box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.5);
-			position: relative;
-			left: auto;
-			right: auto;
-			top: auto;
+			position: absolute;
+			left: 0;
+			right: 0;
+			top: 0;
 			bottom: auto;
-			margin: 0;
+			margin-left: auto;
+			margin-right: auto;
+			height: 100px;
 		}
 		/*____________________________PROJECTS___________________________*/
 		.projects-section-main-div {
@@ -580,7 +588,6 @@
 	@media screen and (max-width: 950px) and (max-height: 1400px) {
 		.about-me {
 			text-align: center;
-			height: 50vh;
 		}
 		.projects-section-main-div h2 {
 			margin-top: 2rem;
@@ -636,7 +643,7 @@
 			font-size: 18px;
 			width: 90%;
 			line-height: 1.9;
-			height: 53vh;
+			height: min-content;
 		}
 
 		#skills-header-div {
@@ -661,6 +668,21 @@
 		.project-cards-row {
 			height: 380px;
 			margin-top: 0;
+		}
+	}
+
+	@media screen and (max-width: 770px) {
+		.skills-list-div {
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			align-items: center;
+			padding-top: 80px;
+			padding-bottom: 10px;
+		}
+		.about-me {
+			height: min-content;
+			min-height: 52vh;
 		}
 	}
 
@@ -703,6 +725,14 @@
 		.social-media-row {
 			height: 200px;
 			width: 100%;
+		}
+	}
+
+	@media screen and (max-width: 550px) {
+		.main-page-list {
+			width: auto;
+			margin-left: 10px;
+			margin-right: 10px;
 		}
 	}
 
@@ -800,11 +830,18 @@
 			height: 40px;
 		}
 	}
-	@media screen and (max-width: 550px) {
-		.main-page-list {
-			width: auto;
-			margin-left: 10px;
-			margin-right: 10px;
+
+	@media screen and (max-width: 300px) {
+		.about-me {
+			margin-top: 8px;
+		}
+		.about-me p {
+			margin-top: 8px;
+			font-size: 12px;
+			line-height: 1.4;
+		}
+		h1 {
+			font-size: 20px;
 		}
 	}
 </style>

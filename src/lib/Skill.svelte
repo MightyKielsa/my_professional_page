@@ -152,6 +152,7 @@
 			margin: 0;
 		}
 		.main-skill-div {
+			min-width: 204px;
 			width: 80%;
 			max-width: 500px;
 			height: 50px;
@@ -159,6 +160,7 @@
 			justify-content: center;
 			gap: 20px;
 			font-size: 24px;
+			justify-self: center;
 		}
 
 		.skill-img {
@@ -177,6 +179,19 @@
 			justify-content: center;
 			gap: 20px;
 			font-size: 24px;
+		}
+	}
+
+	@media screen and (max-width: 1650px) {
+		.main-skill-div {
+			font-size: 18px;
+		}
+	}
+
+	@media screen and (max-width: 770px) {
+		.main-skill-div {
+			padding: 2px;
+			height: 40px;
 		}
 	}
 </style>
