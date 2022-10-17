@@ -49,7 +49,7 @@ const projectsArr = [
 			{ techImg: '/html.png', techName: 'HTML & CSS' },
 			{ techImg: '/js.png', techName: 'Javascript' },
 			{ techImg: '/atom.png', techName: 'React' },
-			{ techImg: '/python.png', techName: 'Node.js' },
+			{ techImg: '/python.png', techName: 'Python' },
 			{ techImg: '/django.png', techName: 'Django' },
 			{ techImg: '/docker.png', techName: 'Docker' }
 		],
@@ -62,7 +62,7 @@ const projectsArr = [
 		techArr: [
 			{ techImg: '/svelte.png', techName: 'Svelte' },
 			{ techImg: '/js.png', techName: 'Javascript' },
-			{ techImg: '/python.png', techName: 'Node.js' },
+			{ techImg: '/node-js.png', techName: 'Node.js' },
 			{ techImg: '/html.png', techName: 'HTML/CSS' }
 		],
 		projectUrl: 'https://github.com/MightyKielsa/my_professional_page'
