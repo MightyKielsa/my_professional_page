@@ -69,9 +69,9 @@
 					on the back burner. I finished uni and went on to work as a <b>trade show manager</b>. The
 					pandemic wrecked the events industry so I became a delivery driver and not-so-soon after
 					that I decided to commit to my passion and attend an
-					<b>intensive fullstack programming bootcamp</b>. But my journey didn't stop there, I'm
-					currently learning <b>C++</b> and looking for a company that will allow me to hone my problem
-					solving skills while allowing me to explore my passion for technology.
+					<b>intensive fullstack programming bootcamp</b>. After that I was hired by a fantastic
+					digital consultancy company - Hippo Digital, where I got the chance to use my knowledge
+					and problem solving skills in various professional projects.
 				</p>
 			</div>
 		</section>
