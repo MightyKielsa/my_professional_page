@@ -68,7 +68,7 @@ const projectsArr = [
 		projectUrl: 'https://github.com/MightyKielsa/my_professional_page'
 	},
 	{
-		projectImg: '/portfolio_1.png',
+		projectImg: '/mapping_project.PNG',
 		projectName: 'Data mapping python package',
 		projectDescription: 'A module aimed at simplifying data mapping process through schemas.',
 		techArr: [

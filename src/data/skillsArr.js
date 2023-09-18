@@ -4,7 +4,7 @@ const skillsArr = [
 		skillImg: '/js.png',
 		skillAlt: 'JS icon',
 		skillId: 1,
-		info: 'I learned JS during the intensive web development bootcamp at School of Code. Most of my personal projects are currently written in this language and I had a chance to work with it professionally at Hippo',
+		info: 'Most of my personal projects are written in this language and I had a chance to work with it professionally at Hippo with gov.uk frameworks and Next.js',
 		projectsArr: [
 			{
 				projectName: 'Bootcamp Adiutor',
@@ -35,11 +35,15 @@ const skillsArr = [
 		skillImg: '/python.png',
 		skillAlt: 'Python icon',
 		skillId: 3,
-		info: 'I used my Python knowledge while working on data integration projects during my time at Hippo Digital and my personal projects, including libraries such as Requests, Pydantic, Boto3, Pytest and more.',
+		info: "I Python while working on data integration projects during my time at Hippo Digital. During those projects I've been exposed to libraries such as Requests, Pydantic, Boto3, Pytest and more.",
 		projectsArr: [
 			{
 				projectName: 'Chat Statistics Website',
 				projectUrl: 'https://github.com/MightyKielsa/bootcamp_helper_app_project'
+			},
+			{
+				projectName: 'Data mapping Python package',
+				projectUrl: 'https://github.com/MightyKielsa/json_mapping_project'
 			}
 		]
 	},
@@ -107,9 +111,13 @@ const skillsArr = [
 		skillImg: '/amazon-aws.png',
 		skillAlt: 'AWS icon',
 		skillId: 8,
-		info: 'During my time at Hippo Digital I worked extensively with tools such as: Lambda, DynamoDB, S3, Eventbridge, Step Functions, Cloudwatch and more. In my personal projects I also gained exposure to AWS Amplify and Cognito',
+		info: 'During my time at Hippo Digital I worked extensively with tools such as: Lambda, DynamoDB, S3, Eventbridge, Step Functions, Cloudwatch and more.',
 		projectsArr: [
-			{ projectName: 'turnUp', projectUrl: 'https://github.com/MightyKielsa/turnUp_front-end' }
+			{ projectName: 'turnUp', projectUrl: 'https://github.com/MightyKielsa/turnUp_front-end' },
+			{
+				projectName: 'Professional Data Integration Project',
+				projectUrl: '#'
+			}
 		]
 	},
 	{
@@ -130,7 +138,7 @@ const skillsArr = [
 		skillImg: '/testing.png',
 		skillAlt: 'testing icon',
 		skillId: 10,
-		info: "I'm experienced in using unit testing libraries such as Pytest and Unittest for Python, and Jest for Javascript. I used those technologies working on a data integration project at Hippo as well as my personal projects ",
+		info: "I'm experienced in using unit testing libraries such as Pytest and Jest. I used those technologies working on a data integration project at Hippo.",
 		projectsArr: [
 			{
 				projectName: 'turnUp',
@@ -139,6 +147,10 @@ const skillsArr = [
 			{
 				projectName: 'Bootcamp Adiutor',
 				projectUrl: 'https://github.com/MightyKielsa/bootcamp_adiutor_front_end'
+			},
+			{
+				projectName: 'Professional Data Integration Project',
+				projectUrl: '#'
 			}
 		]
 	},
@@ -147,11 +159,11 @@ const skillsArr = [
 		skillImg: '/cpp.png',
 		skillAlt: 'C plus plus icon',
 		skillId: 11,
-		info: "As a way of deepening my knowledge of programming I decided to learn a lower level, compiled and statically typed language. I chose C++ because of its versitality and I'm not dissapointed.",
+		info: 'As a way of deepening my programming knowledge I decided to learn a lower level, compiled and statically typed language. ',
 		projectsArr: [
 			{
-				projectName: 'No projects as of yet',
-				projectUrl: '#'
+				projectName: 'UFO command line game',
+				projectUrl: 'https://github.com/MightyKielsa/UFO_game'
 			}
 		]
 	},
