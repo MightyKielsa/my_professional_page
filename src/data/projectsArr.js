@@ -72,12 +72,10 @@ const projectsArr = [
 		projectName: 'Data mapping python package',
 		projectDescription: 'A module aimed at simplifying data mapping process through schemas.',
 		techArr: [
-			{ techImg: '/svelte.png', techName: 'Svelte' },
-			{ techImg: '/js.png', techName: 'Javascript' },
-			{ techImg: '/node-js.png', techName: 'Node.js' },
-			{ techImg: '/html.png', techName: 'HTML/CSS' }
+			{ techImg: '/python.png', techName: 'Python' },
+			{ techImg: '/pytest.svg', techName: 'Pytest' }
 		],
-		projectUrl: 'https://github.com/MightyKielsa/my_professional_page'
+		projectUrl: 'https://github.com/MightyKielsa/json_mapping_project'
 	}
 ];
 
